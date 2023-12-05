@@ -1,29 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
 :root {
-	
-	--green-1: #237088;
-	--green-2: #6faec2;
-	--lightGreen-1: #565d65;
-	--lightGreen-2: #f5fcf4;
-	--black-1: #3b413a;	
-	--black-2: #3f3c3c;
-	--black-2: #858585;
-	--black-3: #5b6359;
-	--white-1: #e8e8e8;
-	--white-2: #fff6e3;
-	--white-3: #e6ddcc;
+
+    --green-1: #237088;
+    --green-2: #6faec2;
+    --lightGreen-1: #565d65;
+    --lightGreen-2: #f5fcf4;
+    --black-1: #3b413a;
+    --black-2: #3f3c3c;
+    --black-2: #858585;
+    --black-3: #5b6359;
+    --white-1: #e8e8e8;
+    --white-2: #fff6e3;
+    --white-3: #e6ddcc;
 
 
 
 }
 
-body{
+body {
     font-family: Poppins;
     background-color: #e1decf;
     overflow-x: hidden;
@@ -31,10 +31,11 @@ body{
 
 
 /* Nav Styles */
-nav{
+nav {
     display: flex;
     align-items: center;
 }
+
 .nav {
     padding: 10px 0;
     position: fixed;
@@ -89,9 +90,10 @@ nav{
 .nav__list li:hover .nav__link {
     color: var(--green-1);
 }
+
 a {
-	display: inline-block;
-	text-decoration: none;
+    display: inline-block;
+    text-decoration: none;
 }
 
 .button {
@@ -186,6 +188,7 @@ a {
         display: block;
     }
 }
+
 /* End Nav Styles */
 
 
@@ -195,7 +198,7 @@ footer {
     background: var(--lightGreen-1);
 }
 
-ol{
+ol {
     padding: 0;
 }
 
@@ -210,7 +213,7 @@ ol{
     font-size: 11px;
     color: var(--white-2);
     margin-bottom: 10px;
-	font-family: Raleway;
+    font-family: Raleway;
 
 }
 
@@ -243,12 +246,14 @@ ol{
     color: var(--white-1);
     font-weight: 600;
 }
-.footer__text{
+
+.footer__text {
     margin: 0;
 }
-.footer__text li{
+
+.footer__text li {
     list-style-type: none;
-    margin:0;
+    margin: 0;
 }
 
 .footer__text a {
@@ -257,7 +262,7 @@ ol{
     font-family: Raleway;
     font-weight: 500;
     line-height: 1.4em;
-    
+
 }
 
 @media only screen and (min-width: 768px) {
@@ -293,3 +298,18 @@ ol{
     }
 }
 
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f2f2f2;
+}
