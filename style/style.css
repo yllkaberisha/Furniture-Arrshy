@@ -8,7 +8,7 @@
 :root {
 
     --green-1: #237088;
-    --green-2: #6faec2;
+    --green-2: #bcdde7;
     --lightGreen-1: #565d65;
     --lightGreen-2: #f5fcf4;
     --black-1: #3b413a;
@@ -122,7 +122,7 @@ nav {
 }
 
 .nav__list li:hover .nav__link {
-    color: var(--green-1);
+    color: var(--green-2);
 }
 
 a {
@@ -140,13 +140,21 @@ a {
 
 .button:hover{
     background-color: transparent;
-    color: var(--green-1);
-    border: 1px solid var(--green-1);
-    transition: .6s ease-in-out;
+ 
+    transition: .4s ease-in;
 }
-.primary-btn {
+.primary-btn , nav .primary-btn {
     color: var(--white-1);
     background: var(--green-1);
+}
+nav .primary-btn:hover{
+    color: var(--green-2);
+    border: 1px solid var(--green-2);
+}
+
+.primary-btn:hover{
+    color: var(--green-1);
+    border: 1px solid var(--green-1);
 }
 
 @media only screen and (min-width: 700px) {

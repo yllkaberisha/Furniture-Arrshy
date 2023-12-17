@@ -153,8 +153,8 @@
 /* Our Specials Section Styles */
 
   #ourSpecials {
-    background: #000;
-    padding-top: 10px;
+    margin-top: 80px;
+    padding-top: 80px;
   }
   
   .ourSpecials__wrapper {
@@ -173,7 +173,7 @@
     padding: 12px;
     padding-top: 50px;
     border-radius: 12px;
-    width: 45%;
+    width: 65%;
     margin: 0 auto;
   }
   
