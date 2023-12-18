@@ -25,7 +25,7 @@
 
 body {
     font-family: Poppins;
-    background-color: #fdfdfd;
+    background-color: #e1dbdb50;
     overflow-x: hidden;
 }
 
@@ -147,7 +147,7 @@ a {
     color: var(--white-1);
     background: var(--green-1);
 }
-nav .primary-btn:hover{
+nav .primary-btn:hover , .discount__wrapper .primary-btn:hover{
     color: var(--green-2);
     border: 1px solid var(--green-2);
 }
