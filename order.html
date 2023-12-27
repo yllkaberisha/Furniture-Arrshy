@@ -7,7 +7,8 @@
     <title>Arrshy's Furniture</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
-     <link rel="stylesheet" href="order.css">
+     <link rel="stylesheet" href="style/order.css">
+     
 </head>
 <body>
     <!-- Nav Section -->
@@ -57,6 +58,7 @@
   </div>
   <!-- End Nav Section -->
 
+    <!--  Order Section -->
   <section id="form" data-aos="fade-up">
     <div class="container">
       <h3 class="form__title">Order Now<h3>
@@ -73,7 +75,7 @@
           </div>
           <div class="form__group">
             <label for="firstName">Email</label>
-            <input type="text" id="email" name="email" required>
+            <input type="email" id="email" name="email" required>
           </div>
           <div class="form__group">
             <label for="productType" aria-placeholder=" Choose">Product type</label>
@@ -85,32 +87,34 @@
           
               <option value="bathroom">Bathroom</option>
             </select>
-        
+          
           </div>
           <div class="form__group">
             <label for="Quantity">Quantity</label>
             <input type="number" id="guestNumber" name="Guest Number" min="1"  required>
           </div>
         
-     
-         
-       
         <div class="form__group">
           <label for="Color">Color</label>
           <select name="color" id="color" >
             <option selected disabled>Choose</option>
-            <option value="small">Living room</option>
-            <option value="medium">Bedroom</option>
-            <option value="large">Kitchen</option>
+            <option value="small">White</option>
+            <option value="medium">Black</option>
+            <option value="large">Wood</option>
         
-            <option value="bathroom">Bathroom</option>
+            
           </select>
         </div>
         <div class="form__group form__group__full">
           <label for="Note">Note</label>
           <textarea name="note" id="note" rows="4" ></textarea>
         </div>
-  <!-- End Booking Section -->
+        <button type="submit" class="btn primary-btn">Order Now</button>
+      </form>
+    </div>
+  </div>
+        </section>
+  <!-- End Order Section -->
          <!-- Footer -->
          <footer>
           <div class="container">
@@ -218,9 +222,9 @@
             </div>
           </div>
         </footer>
-      
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
+       
+        <!-- End Footer -->
+       
  </body>
  </html>
  
