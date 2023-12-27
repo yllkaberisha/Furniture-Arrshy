@@ -482,25 +482,18 @@
 
 
 /* WhyUs Section */
-.whyUs__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 32px;
-}
-.whyUs__left {
-  text-align: center;
-}
+
+
 .whyUs__title {
-  font-family: Poppins;
-  font-size: 28.8px;
+  font-size: 35px;
   color: var(--black-1);
   font-weight: 500;
   margin-bottom: 16px;
 }
 .whyUs__text {
-  font-size: 22.4px;
+  color: var(--black-2);
+  font-size: 19px;
+  gap: 20px;
 }
 .whyUs__right {
   text-align: center;
@@ -512,7 +505,7 @@
 }
 .whyUs__item {
   background: var(--lightGreen-1);
-  padding: 32px;
+  padding: 12px;
   border-radius: 12px;
 }
 .whyUs__item__icon {
@@ -521,20 +514,15 @@
   margin-bottom: 16px;
 }
 .whyUs__item__text {
-  font-family: Poppins;
-  font-size: 22.4px;
+
+  font-size: 20.4px;
   font-weight: 500;
   color: var(--white-3);
 }
 @media only screen and (min-width: 768px) {
-  .whyUs__wrapper {
-      gap: 24px;
-  }
+
   .whyUs__items__wrapper {
       gap: 24px;
-  }
-  .whyUs__item {
-      padding: 32px;
   }
   .whyUs__item__icon {
       max-width: 65px;
@@ -556,21 +544,21 @@
 	margin: 0 auto;
 }
 .testimonial__title {
-	font-size: 1.8rem;
-	margin-bottom: 3rem;
+	font-size: 28px;
+	margin-bottom: 48px;
 	text-align: center;
 	color: var(--black-1);
 }
 .testimonial__items__wrapper {
 	display: grid;
 	grid-template-columns: 1fr;
-	gap: 1rem;
+	gap: 16px;
 	color: var(--white-3)
 }
 .testimonial__item {
-	padding: 1rem;
+	padding: 16px;
 	display: flex;
-	gap: 1rem;
+	gap: 16px;
 	background-color: var(--lightGreen-1);
 	border-radius: 12px;
 }
@@ -588,42 +576,41 @@
 	object-fit: cover;
 }
 .testimonial__item__name {
-	font-size: 1.4rem;
-	font-family: poppins;
-	margin-bottom: 1rem;
+	font-size: 14px;
+	margin-bottom: 16px;
 }
 .testimonial__item__stars {
 	max-height: 15px;
 	width: max-content;
-	margin-bottom: 1.5rem;
+	margin-bottom: 24px;
 }
 .testimonial__item__text {
-	font-size: 1.4rem;
+	font-size: 14px;
 }
 @media only screen and (min-width: 768px) {
 	.testimonial__wrapper {
 		max-width: 900px;
 	}
 	.testimonial__title {
-		font-size: 3.6rem;
-		margin-bottom: 5rem;
+		font-size: 36px;
+		margin-bottom: 80px;
 	}
 	.testimonial__items__wrapper {
 		grid-template-columns: 1fr 1fr;
-		gap: 2rem;
+		gap: 32px;
 	}
 	.testimonial__item {
-		padding: 2rem;
+		padding: 32px;
 	}
 	.testimonial__item__name {
-		font-size: 1.8rem;
-		margin-bottom: 1.5rem;
+		font-size: 18px;
+		margin-bottom: 24px;
 	}
 	.testimonial__item__stars {
-		margin-bottom: 2rem;
+		margin-bottom: 32px;
 	}
 	.testimonial__item__text {
-		font-size: 1.6rem;
+		font-size: 16px;
 		line-height: 1.4em;
 	}
 }
