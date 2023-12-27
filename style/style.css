@@ -16,7 +16,7 @@
     --black-2: #858585;
     --black-3: #5b6359;
     --white-1: #e8e8e8;
-    --white-2: #fff6e3;
+    --white-2: #f7f2e7;
     --white-3: #e6e6d5;
 
 
@@ -273,6 +273,7 @@ ol {
 }
 
 .footer__socials li {
+
     display: inline-block;
     margin-right: 8px;
 }

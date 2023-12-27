@@ -574,6 +574,7 @@
 }
 .testimonial__item__img img {
 	object-fit: cover;
+  border-radius: 10px;
 }
 .testimonial__item__name {
 	font-size: 14px;
