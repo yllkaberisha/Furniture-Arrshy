@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
             return;
         }
 
+        console.log(firstName + " " + lastName)
         // Email validation using a regular expression
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
@@ -29,7 +30,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // If all validation passes, you can submit the form or perform other actions
         alert("Form submitted successfully!");
-        // Uncomment the following line to submit the form
-        // form.submit();
+
+       
+        form.submit();
+
     });
 });

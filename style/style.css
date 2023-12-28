@@ -9,7 +9,7 @@
 
     --green-1: #237088;
     --green-2: #bcdde7;
-    --lightGreen-1: #565d65;
+    --lightGreen-1: #565d65;  
     --lightGreen-2: #f5fcf4;
     --black-1: #3b413a;
     --black-2: #3f3c3c;
@@ -373,14 +373,15 @@ ol {
 }
 .itemsGrid__wrapper {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 	gap: 16px;
+
 }
 .itemsGrid__item {
 	display: flex;
 	flex-direction: column;
 	background-color: var(--lightGreen-1);
-	padding: 8px;
+	padding: 10px;
 	border-radius: 8px;
 	gap: 8px;
 }
@@ -424,9 +425,10 @@ ol {
 	}
 	.itemsGrid__item {
 		flex-direction: row;
-		padding: 10px;
+		padding: 15px;
 		border-radius: 12px;
 		gap: 6px;
+        height: 160px;
 	}
 	.itemsGrid__item__title {
 		font-size: 21px;

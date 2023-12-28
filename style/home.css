@@ -480,6 +480,42 @@
 
 /* End EventsInfo Styles*/
 
+/* Our materials secction */
+
+
+#all-tables h2 {
+  font-size: 35px;
+  color: var(--black-1);
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+table {
+  width: 90%;
+  border-collapse: collapse;
+
+}
+
+.custom-margin-right{
+  padding-right: 30px;
+}
+th, td {
+  color: var(--black-1);
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+td {
+  color: var(--black-2);
+
+}
+
+
+/* End Our materials secction */
+
+
+
 
 /* WhyUs Section */
 
