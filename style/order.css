@@ -1,4 +1,7 @@
-
+:root{
+	--success-color: #23cc71;
+	--error-color: #e74c3c;
+}
 #form {
 	padding: 136px 0;
 }
@@ -14,6 +17,32 @@ h3.form__title {
 	display: grid;
 	grid-template-columns:400px;
 	gap: 32px;
+}
+
+ .form__group small{
+	position: relative;
+	margin: 5px;
+	font-size: 14px;
+	color: var(--error-color);
+	font-size: 14px;
+	bottom:0;
+	left: 0;
+	visibility: hidden;
+}
+.form__group.error small{
+	visibility: visible;
+};
+
+
+.form__group input:focus{
+	outline:0;
+	border-color: #777;
+};
+.form__group.success input{
+	border-color: var(--success-color);
+}
+.form__group.error input{
+	border-color: var(--error-color);
 }
 
 .form__group label {
