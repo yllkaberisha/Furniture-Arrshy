@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="style/style.css">
     <link rel="stylesheet" href="style/home.css">
 
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+
 </head>
 <body>
     <!-- Nav Section -->
@@ -46,7 +53,7 @@
             <div class="nav__list__wrapper">
 
               <li><a class="nav__link" href="./index.html">Home</a></li>
-              <li><a class="nav__link" href="./menu.html">Products</a></li>
+              <li><a class="nav__link" href="./products.html">Products</a></li>
               <li><a class="nav__link" href="./about.html">About</a></li>
               <li><a class="nav__link" href="./contact.html">Contact</a></li>
               <li><a href="./order.html" class="button primary-btn">Order Now</a></li>
@@ -70,7 +77,7 @@
              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, at rerum praesentium quas suscipit reprehenderit possimus ex omnis similique quis corporis magnam deserunt harum nobis soluta consequatur eaque neque sit.
             </p>
             <div class="button__wrapper">
-              <a href="./menu.html" class="button primary-btn">Explore More</a>
+              <a href="./products.html" class="button primary-btn">Explore More</a>
               <a href="./order.html" class="button">Order Now</a>
             </div>
           </div>
@@ -175,7 +182,7 @@
             All of our products are prepared with love at our factory to ensure the highest quality is
             delivered to our customers
           </p>
-          <a href="./booking.html" class="btn primary-btn">Order Now</a>
+          <a href="./booking.html" class="button primary-btn">Order Now</a>
         </div>
       </div>
     </div>
@@ -256,11 +263,11 @@
           </div>
         </div>
         <div class="discount__info">
-          <h3 class="discount__text">20% OFF</h3>
+          <h3 class="discount__text">  20% OFF</h3>
           <h3 class="discount__title">Enter Code For Discount</h3>
           <h3 class="discount__price">
             <span class="discount__oldPrice">$45</span>
-            <span class="discount__newPrice">$35</span>
+            <span class="discount__newPrice"> <i><u>$35</u></i> </span>
           </h3>
           <div class="discount__stars">
             <img src="./images/rating (2).png" alt="3 stars">
@@ -286,7 +293,7 @@
             <div class="eventsInfo__item__info">
               <h2 class="eventsInfo__item__title">Home Furniture</h2>
               <p class="eventsInfo__item__text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi inventore voluptatem doloribus repellendus ipsam reiciendis!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi inventore voluptatem doloribus repellendus ipsam  <mark>reiciendis!</mark> 
               </p>
             </div>
           </div>
@@ -297,7 +304,7 @@
             <div class="eventsInfo__item__info">
               <h2 class="eventsInfo__item__title">Office Furniture</h2>
               <p class="eventsInfo__item__text">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo consequuntur perferendis animi pariatur illo tenetur.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo consequuntur perferendis animi pariatur  <mark>illo tenetur.</mark> 
               </p>
             </div>
           </div>
@@ -305,7 +312,7 @@
         <div class="eventsInfo__right">
           <h2 class="eventsInfo__title">Buy For Anything</h2>
           <p class="eventsInfo__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam tempore explicabo doloremque sunt ipsum harum dicta ab magni qui numquam.</p>
-          <a href="./contact.html" class="btn primary-btn">Contact Now</a>
+          <a href="./contact.html" class="button primary-btn">Contact Now</a>
         </div>
       </div>
     </div>
@@ -342,7 +349,7 @@
               <div class="whyUs__item__icon">
                 <img src="./images/free-shipping.png" alt="Skilled chef">
               </div>
-              <p class="whyUs__item__text text-center" >Free Shipping</p>
+              <p class="whyUs__item__text text-center" > Free Shipping</p>
             </div>
             <div class="whyUs__item">
               <div class="whyUs__item__icon">
@@ -356,6 +363,142 @@
     </div>
   </section>
   <!-- End Why Us section -->
+
+  <!-- Our materials secction-->
+  <section id="all-tables" class="container">
+    <div class="row mb-5">
+      <div class="col-md-6 custom-margin-right">
+        <div id="wood-material">
+          <h2>Wood Material</h2>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Wooden Table</td>
+                <td>High-quality wooden table</td>
+                <td>$300</td>
+              </tr>
+              <tr>
+                <td>Wooden Shelf</td>
+                <td>Sturdy wooden shelf</td>
+                <td>$150</td>
+              </tr>
+              <tr>
+                <td>Wooden Bed Frame</td>
+                <td>Elegant wooden bed frame</td>
+                <td>$500</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <div id="metal-material">
+          <h2>Metal Material</h2>
+          <table class="table table-bordered">
+            <thead >
+              <tr >
+                <th >Item</th>
+                <th colspan="2">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Metal Chair</td>
+                <td>Durable metal chair</td>
+                <td>$150</td>
+              </tr>
+              <tr>
+                <td>Metal Table</td>
+                <td>Sleek metal table</td>
+                <td>$200</td>
+              </tr>
+              <tr>
+                <td>Metal Bookshelf</td>
+                <td>Modern metal bookshelf</td>
+                <td>$180</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row ">
+      <div class="col-md-6 custom-margin-right">
+        <div id="glass-material">
+          <h2>Glass Material</h2>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Glass Coffee Table</td>
+                <td>Elegant glass coffee table</td>
+                <td>$250</td>
+              </tr>
+              <tr>
+                <td>Glass Dining Table</td>
+                <td>Stylish glass dining table</td>
+                <td>$400</td>
+              </tr>
+              <tr>
+                <td>Glass Display Cabinet</td>
+                <td>Contemporary glass cabinet</td>
+                <td>$300</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <div id="plastic-material">
+          <h2>Plastic Material</h2>
+          <table class="table table-bordered" cellspacing="10" cellpadding="10">
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Description</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Plastic Chair</td>
+                <td rowspan="2" class="text-center align-middle">Colorful plastic </td>
+                <td>$50</td>
+              </tr>
+              <tr>
+                <td>Plastic Desk</td>
+                <!-- <td>Compact plastic desk</td> -->
+                <td>$80</td>
+              </tr>
+              <tr>
+                <td>Plastic Storage Bins</td>
+                <td>Set of plastic storage bins</td>
+                <td>$30</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Our materials secction-->
+
 
     <!-- Testimonial Section -->
     <section id="testimonial">
@@ -484,7 +627,7 @@
               <a href="/index.html">Home</a>
             </li>
             <li>
-              <a href="./menu.html">Products</a>
+              <a href="./products.html">Products</a>
             </li>
             <li>
               <a href="./order.html">Order Now</a>
