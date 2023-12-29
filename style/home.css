@@ -25,6 +25,8 @@
     font-size: 18px; 
     margin-bottom: 15px; 
     color: var(--black-1);
+    text-shadow:  .5px .5px .4px rgba(0, 0, 0, 0.5);
+
   }
   
   .hero__info {
@@ -32,6 +34,7 @@
     font-size: 14px; 
     margin-bottom: 15px; 
     color: var(--black-2);
+    white-space: normal;
   }
   
   .button__wrapper {
@@ -180,8 +183,10 @@
   .ourSpecials__item__img {
     margin-top: calc(-50% - 20px);
     margin-bottom: 20px;
-    border-radius: 12px;
+    /* border-radius: 12px; */
     height: 150px;
+    outline: 2px solid  var(--lightGreen-1);
+
   }
   
   .ourSpecials__item__img img {
@@ -482,9 +487,12 @@
 
 /* Our materials secction */
 
-
-#all-tables h2 {
+#all-tables .itemsGrid__title{
   font-size: 35px;
+  margin-bottom: 100px;
+}
+#all-tables h2 {
+  font-size: 25px;
   color: var(--black-1);
   font-weight: 500;
   margin-bottom: 16px;
@@ -493,7 +501,7 @@
 table {
   width: 90%;
   border-collapse: collapse;
-
+  box-shadow: 0 0 2px rgba(67, 66, 66, 0.1); 
 }
 
 .custom-margin-right{
@@ -504,11 +512,12 @@ th, td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: left;
+  
 }
 
 td {
   color: var(--black-2);
-
+  background-color: var(--lightGreen-3) !important ;
 }
 
 
