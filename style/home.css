@@ -306,7 +306,7 @@
 	flex-direction: column;
 	padding: 24px;
 	border-radius: 12px;
-	background: var(--lightGreen-1) url(./images/discount-illustration.png) no-repeat bottom right / 100px;
+	background: var(--lightGreen-1) url(../images/discount-illustration.png) no-repeat bottom right / 100px;
 }
 .discount__images {
 	display: flex;
@@ -335,6 +335,11 @@
 	color: var(--white-1);
 	font-weight: 600;
 	margin-bottom: 16px;
+}
+ .discount__time{
+  font-size: 18px;
+	color: var(--white-1);
+	font-weight: 600;
 }
 .discount__price {
 	font-size: 20.16px;
