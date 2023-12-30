@@ -3,6 +3,8 @@ const navList = document.querySelector('.nav__list');
 const navIconEl = document.querySelector('.nav__icon');
 const navBgOverlayEl = document.querySelector('.nav__bgOverlay');
 
+console.warn("main starts")
+
 const navOpen = () => {
   navList.classList.add('show');
   navBgOverlayEl.classList.add('active');
@@ -99,7 +101,7 @@ form.addEventListener("submit", handleSubmit)
 
     // Display total price in the footer
     if(totalElement)
-      totalElement.textContent = '$' + totalPrice;
+      totalElement.textContent = '$' + toString(totalPrice);
   }
 
   // Filter and render for metal materials
@@ -115,3 +117,6 @@ form.addEventListener("submit", handleSubmit)
   });
 
   renderTable('wood', woodMaterials, 'wood-material-items', 'wood-total');
+
+
+console.warn("Main Ends")

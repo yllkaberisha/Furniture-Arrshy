@@ -1,5 +1,8 @@
 
     // Deklarimi i një variable dhe shfaqja e vlerës së saj në console.
+
+console.warn("Script Starts")
+
     var emri = "Lura";
     console.log("Emri: " + emri);
 
@@ -182,3 +185,5 @@
 
     // Thirrja e callback funksionit për çdo element në array-in e mobiljeve
     mobiljet.forEach(shfaqInfoMobilje);
+
+console.warn("Script Ends")
