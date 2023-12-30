@@ -107,7 +107,7 @@
         Contact & Inquiry
       </h3>
       <div class="form__wrapper">
-        <form name="contact">
+        <form name="contact" id="contact" action="https://formspree.io/f/xjvnvkqb" method="POST">
           <div class="form__group">
             <label for="firstName">First Name</label>
             <input type="text" id="firstName" name="First Name" required>
@@ -126,9 +126,10 @@
           </div>
           <div class="form__group form__group__full">
             <label for="message">Message</label>
-            <textarea name="Message" id="message" cols="30" rows="10" required></textarea>
+            <textarea name="Message" id="message" cols="30" rows="6" required></textarea>
           </div>
-          <button type="submit" class="button primary-btn">Send</button>
+          <button type="submit" class="button primary-btn" >Send</button>
+          <p id="my-form-status" class="text-center align-middle"></p>
         </form>
       </div>
     </div>
