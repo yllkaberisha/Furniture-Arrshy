@@ -396,7 +396,7 @@ ol {
 	object-fit: cover;
 	border-radius: 12px;
 }
-.itemsGrid__item__title {
+.itemsGrid__item__title{
 	font-size: 20.16px;
 	line-height: 1.3em;
 	font-weight: 500;
@@ -516,10 +516,17 @@ ol {
     padding: 20px 0;
   }
   
-  .form__title {
+  .form__title , #my-form-status {
     font-size: 20px;
     color: var(--black-1);
     font-weight: 600;
+  }
+
+  #my-form-status{
+    margin-top: 15px;
+    color: var(--green-1);
+    font-size: 23px;
+
   }
   
   .form__wrapper {
