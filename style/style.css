@@ -245,13 +245,21 @@ nav .primary-btn:hover , .discount__wrapper .primary-btn:hover{
 /* Footer style */
 footer {
     background: var(--lightGreen-1);
+    padding: 20px 0;
 }
 
 ol {
     padding: 0;
 }
 
+footer ul{
+  list-style:square;
+  color: var(--white-1);
+}
 
+footer ul li ol li a:hover{
+  color: var(--green-2);
+}
 
 .footer__logo {
     /* width: 220px; */
@@ -457,7 +465,6 @@ ol {
   .storeInfo__item {
     background-color: var(--lightGreen-1);
     padding: 20px 30px;
-    text-align: center;
     text-align: center;
     border-radius: 12px;
     width: 150px;
