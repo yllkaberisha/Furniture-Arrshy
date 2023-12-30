@@ -1,69 +1,76 @@
-const form = document.getElementById('form');
-const firstName = document.getElementById('firstName');
-const lastName = document.getElementById('lastName');
-const email = document.getElementById('email');
-const productType = document.getElementById('tableType');
-const quantity = document.getElementById('guestNumber');
-const color = document.getElementById('Color');
-const note = document.getElementById('note');
+const form = document.querySelector('#orderForm');
+let firstNameInput= document.querySelector('#firstName');
+let lastNameInput= document.querySelector('#lastName');
+let emailInput= document.querySelector('#email');
+let productTypeInput= document.querySelector('#tableType');
+let quantityInput= document.querySelector('#guestNumber');
+let colorInput= document.querySelector('#Color');
+let noteInput= document.querySelector('#note');
 
 
-//show error function
-function showError(input, message){
-    const formgroup= input.parentElement;
-    formgroup.className ='form__group error' ;
-    const small = formgroup.querySelector('small');
-    small.innerText= message;
+form.addEventListener('submit', (event)=>{
+ event.preventDefault();
 
-}
-//show sucess function
-function showSuccess(input){
-    formgroup= input.parentElement;
-    formgroup.className ='form__group success' ;
-}
-//email function
-function checkEmail(input){
-    var re = /\S+@\S+\.\S+/;
- if(re.test(input.value.trim())){
-    showSuccess(input);
- }else{
-    showError(input, 'Email is not valid');
- }
-}
-// check required
-
-function checkRequired(inputArray){
-    inputArray.forEach(function(input){
-     if(input.value===''){
-        showError(input, `${getFieldName(input)} is Reequired `)
-     }
-    });
-
-}
-//check length
-function checkLength(input, min,max){
-    if(input.value.length<min){
-        showError(input, `${getFieldName(input)} must be at least ${min} characters`)
-    
-    }else if(input.value.length>max){
-    showError(input, `${getFieldName(input)} must be at less than ${max} characters`)
-}
-else{
-    showSuccess(input);
-}
-}
-// get field name 
-function  getFieldName(input){
-    return input.id.charAt(0).toUpperCase()+input.id.slice(1);
-}
-
-// Even listeners
-form.addEventListener( 'submit', function(e){
-    e.preventDefault();
-    checkRequired([firstName,lastName,email,productType,color,quantity,note]);
-    checkLength(note, 10, 20);
-    checkEmail(email);
+ validateForm();
 });
+
+
+function validateForm(){//
+    //firstName
+    if(firstNameInput.value.trim()===''||firstNameInput.value.trim()==null){
+        setError(firstNameInput, 'Name can not be empty');
+    }
+    
+    // lastName
+    if (lastNameInput.value.trim() === '' || lastNameInput.value.trim() === null) {
+        setError(lastNameInput, 'Last Name can not be empty');
+    }
+
+    // email
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailInput.value.trim())) {
+        setError(emailInput, 'Invalid email address');
+    }
+
+    // productType
+    if (productTypeInput.value === 'Choose') {
+        setError(productTypeInput, 'Please select a product type');
+    }
+
+    // quantity
+    if (quantityInput.value.trim() === '' || quantityInput.value <= 0) {
+        setError(quantityInput, 'Quantity must be a positive number');
+    }
+
+    // color
+    if (colorInput.value === 'Choose') {
+        setError(colorInput, 'Please select a color');
+    }
+
+    // note
+    if (noteInput.value.trim() === '' || noteInput.value.trim() === null) {
+        setError(noteInput, 'Note can not be empty');
+    }
+    
+
+    //lastName
+    //email
+    //productInput
+    //quantity
+    //color
+    //note
+}
+
+function setError(element,errorMessage){
+    const parent = element.parentElement;
+    parent.classList.add('error');
+    const paragraph = parent.querySelector('p');
+    paragraph.textContent = errorMessage;
+}
+
+
+const submitButton = document.querySelector('.btn.primary-btn');
+submitButton.addEventListener('click', validateForm);
 
 
 
