@@ -1,9 +1,5 @@
 /* Our Story Styles */
-.ourStory__wrapper {
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-}
+
 .ourStory__title,
 .ourGoals__title {
 	font-size: 1.8rem;
@@ -24,14 +20,7 @@
 	color: var(--black-2);
 }
 @media only screen and (min-width: 768px) {
-	.ourStory__wrapper {
-		flex-direction: row;
-		gap: 3rem;
-	}
-	.ourStory__img,
-	.ourStory__info {
-		flex: 1;
-	}
+
 	.ourStory__title,
 	.ourGoals__title {
 		font-size: 3.6rem;
@@ -60,7 +49,6 @@
 	margin: 0 auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	grid-template-rows: 1fr 1fr;
 	grid-row: auto;
 	gap: 1rem;
 }
