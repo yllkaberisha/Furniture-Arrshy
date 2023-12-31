@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap');
 
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/your-custom-font.woff2') format('woff2'),
+       url('fonts/your-custom-font.woff') format('woff');
+}
+
+
+
+.myFont {
+  font-family: 'MyFont', sans-serif;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -28,10 +42,13 @@ body {
     font-family: Poppins;
     background-color: #e1dbdb50;
     overflow-x: hidden !important;
+
+    
 }
 
 section {
 	padding: 100px 0;
+  
 }
 .contactinfo{
 	padding-top: 90px;
@@ -245,13 +262,21 @@ nav .primary-btn:hover , .discount__wrapper .primary-btn:hover{
 /* Footer style */
 footer {
     background: var(--lightGreen-1);
+    padding: 20px 0;
 }
 
 ol {
     padding: 0;
 }
 
+footer ul{
+  list-style:square;
+  color: var(--white-1);
+}
 
+footer ul li ol li a:hover{
+  color: var(--green-2);
+}
 
 .footer__logo {
     /* width: 220px; */
@@ -457,7 +482,6 @@ ol {
   .storeInfo__item {
     background-color: var(--lightGreen-1);
     padding: 20px 30px;
-    text-align: center;
     text-align: center;
     border-radius: 12px;
     width: 150px;

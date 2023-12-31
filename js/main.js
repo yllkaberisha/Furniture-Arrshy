@@ -101,7 +101,7 @@ form.addEventListener("submit", handleSubmit)
 
     // Display total price in the footer
     if(totalElement)
-      totalElement.textContent = '$' + toString(totalPrice);
+      totalElement.textContent = '$' + totalPrice.toString();
   }
 
   // Filter and render for metal materials
