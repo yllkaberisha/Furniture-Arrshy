@@ -84,6 +84,33 @@ if (timeOfTheDay)
   timeOfTheDay.innerText = greeting;
 
 // ----------------------------------------------------------------
+var audio = document.getElementById('ourStoryAudio');
+        var scrollThreshold = 500; 
+        audio.currentTime = 8;
+
+        function handleScroll() {
+            var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+
+            audio.currentTime = 8;
+
+            if (scrollPosition > scrollThreshold) {
+                audio.pause();
+            } else {
+                audio.play();
+            }
+        }
+
+        // Attach the scroll event listener
+        window.addEventListener('scroll', handleScroll);
+
+        // Pause the audio when the user leaves the page
+        window.addEventListener('beforeunload', function() {
+            audio.pause();
+        });
+
+// ----------------------------------------------------------------
+
+
 
 var heroInfoElement = document.querySelector('.hero__info');
 if(heroInfoElement){

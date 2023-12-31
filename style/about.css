@@ -37,7 +37,7 @@
 
 /* Our Goals Styles */
 
-ourGoals__info {
+.ourGoals__info {
 	text-align: left;
 	margin-bottom: 50px;
 }
@@ -65,4 +65,12 @@ ourGoals__info {
 	.ourGoals__text {
 		margin: 0 auto;
 	}
+}
+
+
+.audioSpan{
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
