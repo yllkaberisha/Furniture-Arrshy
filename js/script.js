@@ -187,6 +187,39 @@ console.warn("Script Starts")
 
 
 
+    // try catch 
+
+    function myFunction() {
+        // const message = document.getElementById("p01");
+        // message.innerHTML = ""; 
+        // let x = document.getElementById("demo").value;
+        var x= "99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999991111111111111111111111111111119999999999999999999999999999999999"
+         x= '9';
+        try {
+          if (x.trim() == "") throw "is empty";
+          if (isNaN(x)) throw "is not a number";
+          x = Number(x);
+      
+          // Use Number.MAX_VALUE to check if the number is too high
+          if (x > Number.MAX_VALUE) throw "is too high";
+      
+          // Use Number.MIN_VALUE to check if the number is too low
+          if (x < Number.MIN_VALUE) throw "is too low";
+      
+          // Use toExponential() to convert the number to exponential notation
+          const formattedNumber = x.toExponential();
+        //   message.innerHTML = "Formatted number: " + formattedNumber;
+          console.log(formattedNumber);
+        } catch (err) {
+        //   message.innerHTML = "Error: " + err + ".";
+        console.log(err);
+        } finally {
+        //   document.getElementById("demo").value = "";
+        console.log("finally")
+        }
+      }
+      
+      myFunction()
 
 
 console.warn("Script Ends")

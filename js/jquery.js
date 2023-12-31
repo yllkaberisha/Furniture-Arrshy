@@ -22,7 +22,10 @@
 
     //----------------------------------------------------------------
 
-    $(".moreReviews").hide();
+    //callback
+    $(".moreReviews").hide("slow", function(){
+        console.log("The paragraph is now hidden");
+    });
 
     $("#toggleReviews").click(function () {
         $(".moreReviews").slideToggle("slow", function () {
@@ -33,7 +36,23 @@
     
     
 
+    //---------------------------------------------------------------
+     var text = $('.textToModify').text()
+    console.log(text)
 
+    //-------------------------------------------------------
+    $('.textToModify').append("Arrshy Furniture is the best!")
+
+    $('.textToModify').prepend("Arrshy Furniture is well known on the country!")
+
+    
+    //--------------------------------------------------------------
+
+    //empty() method removes the child elements of the selected element(s).
+    $(".elementToRemove").empty()
+
+    //remove() method removes the selected element(s) and its child elements.
+    $(".elementToRemove").remove()
 
 
    console.warn("jQuery ends")

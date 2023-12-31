@@ -40,6 +40,8 @@ window.addEventListener('resize', () => {
 
 
 
+
+
 var form = document.getElementById("contact");
 
 async function handleSubmit(event) {
@@ -54,7 +56,15 @@ fetch(event.target.action, {
 }
 }).then(response => {
   if (response.ok) {
-    status.innerHTML = "Thanks for your submission!";
+    var div = $("#load");
+    div.animate({height: '50px', opacity: '0.4'}, "slow");
+    div.animate({width: '50px', opacity: '0.8'}, "slow");
+    div.animate({height: '10px', opacity: '0.4'}, "slow");
+    div.animate({width: '10px', opacity: '0.8'}, "slow");
+  
+    // Fade in and slide up animation
+    $("#my-form-status").html("Thanks for your submission!")
+  
     form.reset()
   } 
 }).catch(error => {
@@ -83,33 +93,6 @@ var timeOfTheDay = document.getElementById('timeOfTheDay')
 if (timeOfTheDay)
   timeOfTheDay.innerText = greeting;
 
-// ----------------------------------------------------------------
-// var audio = document.getElementById('ourStoryAudio');
-
-// if(audio){
-//         var scrollThreshold = 500; 
-//         audio.currentTime = 8;
-
-//         function handleScroll() {
-//             var scrollPosition = window.scrollY || document.documentElement.scrollTop;
-
-//             audio.currentTime = 8;
-
-//             if (scrollPosition > scrollThreshold) {
-//                 audio.pause();
-//             } else {
-//                 audio.play();
-//             }
-//         }
-
-//         // Attach the scroll event listener
-//         window.addEventListener('scroll', handleScroll);
-
-//         // Pause the audio when the user leaves the page
-//         window.addEventListener('beforeunload', function() {
-//             audio.pause();
-//         });
-//       }
 // ----------------------------------------------------------------
 
 
