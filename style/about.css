@@ -15,7 +15,7 @@
 }
 .ourStory__text,
 .ourGoals__text {
-	font-size: 12px;
+	font-size:10px;
 	line-height: 1.4em;
 	color: var(--black-2);
 }
