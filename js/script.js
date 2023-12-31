@@ -1,5 +1,4 @@
 
-    // Deklarimi i një variable dhe shfaqja e vlerës së saj në console.
 
 console.warn("Script Starts")
 

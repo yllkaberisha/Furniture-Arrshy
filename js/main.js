@@ -84,30 +84,32 @@ if (timeOfTheDay)
   timeOfTheDay.innerText = greeting;
 
 // ----------------------------------------------------------------
-var audio = document.getElementById('ourStoryAudio');
-        var scrollThreshold = 500; 
-        audio.currentTime = 8;
+// var audio = document.getElementById('ourStoryAudio');
 
-        function handleScroll() {
-            var scrollPosition = window.scrollY || document.documentElement.scrollTop;
+// if(audio){
+//         var scrollThreshold = 500; 
+//         audio.currentTime = 8;
 
-            audio.currentTime = 8;
+//         function handleScroll() {
+//             var scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-            if (scrollPosition > scrollThreshold) {
-                audio.pause();
-            } else {
-                audio.play();
-            }
-        }
+//             audio.currentTime = 8;
 
-        // Attach the scroll event listener
-        window.addEventListener('scroll', handleScroll);
+//             if (scrollPosition > scrollThreshold) {
+//                 audio.pause();
+//             } else {
+//                 audio.play();
+//             }
+//         }
 
-        // Pause the audio when the user leaves the page
-        window.addEventListener('beforeunload', function() {
-            audio.pause();
-        });
+//         // Attach the scroll event listener
+//         window.addEventListener('scroll', handleScroll);
 
+//         // Pause the audio when the user leaves the page
+//         window.addEventListener('beforeunload', function() {
+//             audio.pause();
+//         });
+//       }
 // ----------------------------------------------------------------
 
 
@@ -122,6 +124,7 @@ if(heroInfoElement){
   }
 
 }
+// ----------------------------------------------------------------
 
 
   var allItems = [

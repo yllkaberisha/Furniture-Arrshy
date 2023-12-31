@@ -147,10 +147,7 @@
     display: none;
 }
 
-#toggleButton{
-    border: none;
-    background: linear-gradient(to right, var(--lightGreen-2),  var(--white-1));
-}
+
 
 #ourProductsShown{
     margin-top: -60px;
