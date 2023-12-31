@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap');
 
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/your-custom-font.woff2') format('woff2'),
+       url('fonts/your-custom-font.woff') format('woff');
+}
+
+
+
+.myFont {
+  font-family: 'MyFont', sans-serif;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -28,10 +42,13 @@ body {
     font-family: Poppins;
     background-color: #e1dbdb50;
     overflow-x: hidden !important;
+
+    
 }
 
 section {
 	padding: 100px 0;
+  
 }
 .contactinfo{
 	padding-top: 90px;
