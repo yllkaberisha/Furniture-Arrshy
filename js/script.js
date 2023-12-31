@@ -189,11 +189,5 @@ console.warn("Script Starts")
 
 
 
-    console.log("Entites:")
-
-    //  HTML entities filojn me & dhe mbarojn me ;
-    var mesazhi ="P&#xEB; rsh&euml;ndetje! &#xC7;kemi! &#xCB;sht&euml; nj&euml; projekt i &#xE7;muar";
-    console.log(mesazhi);
-
 
 console.warn("Script Ends")

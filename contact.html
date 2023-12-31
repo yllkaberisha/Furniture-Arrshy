@@ -104,33 +104,58 @@
   <section class="form" data-aos="fade-down">
     <div class="container">
       <h3 class="form__title">
-        Contact & Inquiry
+        Contact & Inquiry <p style="color: var(--black-2);" id="timeOfTheDay"> Good afternoon!</p>
       </h3>
       <div class="form__wrapper">
         <form name="contact" id="contact" action="https://formspree.io/f/xjvnvkqb" method="POST">
           <div class="form__group">
             <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="First Name" required>
+            <input type="text" id="firstName" name="First Name" autocomplete="off">
           </div>
           <div class="form__group">
             <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="Last Name" required>
+            <input type="text" id="lastName" name="Last Name" required autocomplete="on">
           </div>
           <div class="form__group">
             <label for="email">Email</label>
             <input type="email" id="email" name="Email" required>
           </div>
+
+          <div class="form__group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
+            <small class="form__hint">Format: 044-111-111</small>
+          </div>
+
+          <div class="form__group">
+          <label for="qyteti">City:</label>
+          <input list="qytetet" name="City" id="qyteti">
+
+          <datalist id="qytetet">
+            <option value="Prishtinë">
+            <option value="Skenderaj">
+            <option value="Pejë">
+            <option value="Prizren">
+            <option value="Podujevë">
+          </datalist>
+          </div>
+          
           <div class="form__group">
             <label for="subject">Subject</label>
             <input type="text" id="subject" name="Subject" required>
           </div>
           <div class="form__group form__group__full">
             <label for="message">Message</label>
-            <textarea name="Message" id="message" cols="30" rows="6" required></textarea>
+            <textarea name="Message" id="message" cols="30" rows="6" required placeholder="Write us here! We want to hear your opinion :) "></textarea>
           </div>
+
           <button type="submit" class="button primary-btn" >Send</button>
-          <p id="my-form-status" class="text-center align-middle"></p>
+          <output id="my-form-status"name="formOutput" class="text-center align-middle"></output>
+
         </form>
+
+        <keygen id="myKeygen" name="security" form="contact">
+
       </div>
     </div>
   </section>

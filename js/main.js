@@ -66,6 +66,36 @@ form.addEventListener("submit", handleSubmit)
 
 }
 
+// ----------------------------------------------------------------
+
+var currentHour = new Date().getHours();
+
+var greeting = 'Good ';
+if (currentHour >= 5 && currentHour < 12) {
+  greeting = greeting.concat('morning!');
+} else if (currentHour >= 12 && currentHour < 18) {
+  greeting = greeting.concat('afternoon!');
+} else {
+  greeting = greeting.concat('evening!');
+}
+
+var timeOfTheDay = document.getElementById('timeOfTheDay')
+if (timeOfTheDay)
+  timeOfTheDay.innerText = greeting;
+
+// ----------------------------------------------------------------
+
+var heroInfoElement = document.querySelector('.hero__info');
+if(heroInfoElement){
+  heroInfoElement.innerHTML = heroInfoElement.innerHTML.replaceAll('Lorem', 'Arrshy Furniture');
+  var matchResult = heroInfoElement.innerHTML.match('Arrshy Furniture');
+
+  if (matchResult) {
+    heroInfoElement.textContent += 'Arrshy Furniture is first company in Kosovo to sell in all continents of the wold.';
+  }
+
+}
+
 
   var allItems = [
     { name: 'Wooden Table', description: 'High-quality wooden table', price: 300, material: 'wood' },
