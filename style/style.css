@@ -1,5 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&family=Raleway:wght@400;500;600&display=swap');
 
+
+@font-face {
+  font-family: 'MyFont';
+  src: url('fonts/your-custom-font.woff2') format('woff2'),
+       url('fonts/your-custom-font.woff') format('woff');
+}
+
+
+
+.myFont {
+  font-family: 'MyFont', sans-serif;
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -28,10 +42,12 @@ body {
     font-family: Poppins;
     background-color: #e1dbdb50;
     overflow-x: hidden !important;
+
+    
 }
 
 section {
-	padding: 100px 0;
+	padding: 100px 0;  
 }
 .contactinfo{
 	padding-top: 90px;
@@ -245,13 +261,21 @@ nav .primary-btn:hover , .discount__wrapper .primary-btn:hover{
 /* Footer style */
 footer {
     background: var(--lightGreen-1);
+    padding: 20px 0;
 }
 
 ol {
     padding: 0;
 }
 
+footer ul{
+  list-style:square;
+  color: var(--white-1);
+}
 
+footer ul li ol li a:hover{
+  color: var(--green-2);
+}
 
 .footer__logo {
     /* width: 220px; */
@@ -458,7 +482,6 @@ ol {
     background-color: var(--lightGreen-1);
     padding: 20px 30px;
     text-align: center;
-    text-align: center;
     border-radius: 12px;
     width: 150px;
   }
@@ -516,7 +539,7 @@ ol {
     padding: 20px 0;
   }
   
-  .form__title , #my-form-status {
+  .form__title {
     font-size: 20px;
     color: var(--black-1);
     font-weight: 600;
@@ -525,7 +548,7 @@ ol {
   #my-form-status{
     margin-top: 15px;
     color: var(--green-1);
-    font-size: 23px;
+    font-size: 20px;
 
   }
   
@@ -559,6 +582,9 @@ ol {
     border-radius: 8px;
     margin-top: 8px;
     color: var(--white-2);
+  }
+  .form__group ::placeholder{
+    color: #ada9a9;
   }
   #discount-code{
     margin-left: 20px;
@@ -610,3 +636,8 @@ ol {
   }
   
   
+
+  .toggleButton{
+    border: none;
+    background: linear-gradient(to right, var(--lightGreen-2),  var(--white-1));
+}
