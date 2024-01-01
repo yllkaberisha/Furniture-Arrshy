@@ -1,3 +1,22 @@
+/*var form = document.getElementById('form');
+
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+})*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const form = document.querySelector('#orderForm');
 let firstNameInput= document.querySelector('#firstName');
 let lastNameInput= document.querySelector('#lastName');
