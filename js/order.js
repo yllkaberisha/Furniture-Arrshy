@@ -33,16 +33,23 @@ form.addEventListener('submit', (event)=>{
  validateForm();
 });
 
+function validateForm() {
+    // Clear previous errors
+    clearErrors();
+}
 
 function validateForm(){//
     //firstName
     if(firstNameInput.value.trim()===''||firstNameInput.value.trim()==null){
         setError(firstNameInput, 'Name can not be empty');
-    }
-    
+    } 
+
     // lastName
     if (lastNameInput.value.trim() === '' || lastNameInput.value.trim() === null) {
         setError(lastNameInput, 'Last Name can not be empty');
+    }
+    else{
+        true;
     }
 
     // email
@@ -50,27 +57,30 @@ function validateForm(){//
     if (!emailRegex.test(emailInput.value.trim())) {
         setError(emailInput, 'Invalid email address');
     }
+    
 
     // productType
     if (productTypeInput.value === 'Choose') {
         setError(productTypeInput, 'Please select a product type');
     }
-
+  
     // quantity
     if (quantityInput.value.trim() === '' || quantityInput.value <= 0) {
         setError(quantityInput, 'Quantity must be a positive number');
     }
+   
 
     // color
     if (colorInput.value === 'Choose') {
         setError(colorInput, 'Please select a color');
     }
+    
 
     // note
     if (noteInput.value.trim() === '' || noteInput.value.trim() === null) {
         setError(noteInput, 'Note can not be empty');
     }
-    
+   
 
     //lastName
     //email
@@ -86,10 +96,19 @@ function setError(element,errorMessage){
     const paragraph = parent.querySelector('p');
     paragraph.textContent = errorMessage;
 }
+function clearErrors() {
+    const errorElements = document.querySelectorAll('.error');
+    errorElements.forEach((element) => {
+      element.classList.remove('error');
+      const paragraph = element.querySelector('p');
+      paragraph.textContent = '';
+    });
+}
 
 
 const submitButton = document.querySelector('.btn.primary-btn');
 submitButton.addEventListener('click', validateForm);
+submitButton.addEventListener('click', clearErrors);
 
 
 
