@@ -1,21 +1,3 @@
-/*var form = document.getElementById('form');
-
-form.addEventListener('submit', function(event){
-    event.preventDefault();
-})*/
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const form = document.querySelector('#orderForm');
 let firstNameInput= document.querySelector('#firstName');
@@ -48,9 +30,7 @@ function validateForm(){//
     if (lastNameInput.value.trim() === '' || lastNameInput.value.trim() === null) {
         setError(lastNameInput, 'Last Name can not be empty');
     }
-    else{
-        true;
-    }
+    
 
     // email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -99,9 +79,11 @@ function setError(element,errorMessage){
 function clearErrors() {
     const errorElements = document.querySelectorAll('.error');
     errorElements.forEach((element) => {
-      element.classList.remove('error');
-      const paragraph = element.querySelector('p');
-      paragraph.textContent = '';
+        element.classList.remove('error');
+        const paragraph = element.querySelector('p');
+        if (paragraph) {
+            paragraph.textContent = '';
+        }
     });
 }
 
@@ -109,7 +91,6 @@ function clearErrors() {
 const submitButton = document.querySelector('.btn.primary-btn');
 submitButton.addEventListener('click', validateForm);
 submitButton.addEventListener('click', clearErrors);
-
 
 
 
