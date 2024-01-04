@@ -72,6 +72,8 @@
     </div>
   </section>
 
+
+
   <!-- Our Specials -->
   <section id="ourSpecials">
     <div class="container">
@@ -118,7 +120,7 @@
 
 
   <!-- Top items -->
-  <section class="itemsGrid" data-aos="fade-up">
+  <section class="itemsGrid" style="margin-top: -60px;" data-aos="fade-up">
     <div class="container">
       <h2 class="itemsGrid__title">
         Top products
@@ -272,7 +274,7 @@
   <!-- Living room end -->
 
 <div id="showRow" class="row justify-content-center mt-5">
-  <button id="toggleButton" class="button">Show More <span class="toggle-icon">&#x25BC;</span> </button>
+  <button id="toggleButton" class="button toggleButton">Show More <span class="toggle-icon">&#x25BC;</span> </button>
 </div>
 <div class="content ">
 
@@ -532,6 +534,22 @@
     <!-- Bathroom Section -->
   </div>
 
+      <!-- Video Section  -->
+      <section id="ourProductsShown" class="container">
+        <h3 class="ourSpecials__title">See our products</h3>
+  
+          <div class="row mt-2">
+            <video class="col-md-6" id="furnitureVideo" width="600" height="324" autoplay controls muted>
+              <source src="./video/furniture.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video>
+            <!-- <iframe class="col-md-6" width="600" height="324" src="https://www.youtube.com/embed/yStFPTjLWC8?autoplay=1&mute=1" frameborder="0" allow="autoplay" allowfullscreen ></iframe> -->
+            <iframe class="col-md-6" width="600" height="324" src="https://www.youtube.com/embed/8paaoWp2OeY?autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>    
+          </div>
+      </section>
+      
+        <!--End  Video Section  -->
+
   <!-- Choose Section  -->
     <section id="choose">
       <div class="container">
@@ -680,6 +698,21 @@
       var data = ev.dataTransfer.getData("text");
       ev.target.appendChild(document.getElementById(data));
     }
+
+    var furnitureVideo = document.getElementById('furnitureVideo');
+
+    // Add a scroll event listener to the window
+    window.addEventListener('scroll', function() {
+        // Check if the video element is in the viewport
+        var rect = furnitureVideo.getBoundingClientRect();
+        
+        // If the video is in the viewport, unmute; otherwise, mute
+        if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+            furnitureVideo.muted = false; // Video is in the viewport, unmute
+        } else {
+            furnitureVideo.muted = true; // Video is out of the viewport, mute
+        }
+    });
     </script>
     </head>
     <body>

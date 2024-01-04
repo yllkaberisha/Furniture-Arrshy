@@ -18,25 +18,55 @@
     }
   </style>
 
+
   <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      console.log("Hello, the document is loaded!");
-    });
+    // Set the target date to 1 day from now
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 1);
+
+    // Update the countdown every second
+    const countdownInterval = setInterval(updateCountdown, 1000);
+
+    function updateCountdown() {
+      // Get the current date and time
+      const currentDate = new Date();
+
+      // Calculate the difference between the target date and the current date
+      const timeDifference = targetDate - currentDate;
+
+      // Calculate hours, minutes, and seconds
+      const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
+
+      // Display the countdown in the format hh:mm:ss
+      const formattedTime = padZero(hours) + ':' + padZero(minutes) + ':' + padZero(seconds);
+
+      // Update the HTML element with the id 'time-left'
+      document.getElementById('time-left').innerText = formattedTime;
+
+      // Check if the countdown has reached zero
+      if (timeDifference <= 0) {
+        clearInterval(countdownInterval);
+        document.getElementById('time-left').innerText = '00:00:00';
+      }
+    }
+
+    function padZero(number) {
+      // Add leading zero if the number is less than 10
+      return (number < 10 ? '0' : '') + number;
+    }
   </script>
+
 </head>
 
 <body>
-  <!-- Nav Section -->
-  <!-- <a href="./about.html">
-    <div id="menu-bar" class="fas fa-bars"><a href="#navvv">.</a></div>
-  </a> -->
-
   <div class="nav" id="navvv">
     <div class="container">
       <div class="nav__wrapper">
         <a href="./index.html" class="logo">
           <img src="./images/desk-lamp.png" alt="logo">
-          <h1 >Arrshy's Furniture</h1>
+          <h1>Arrshy's Furniture</h1>
         </a>
         <nav>
           <div class="nav__icon">
@@ -77,14 +107,14 @@
   <section id="hero">
     <div class="container">
       <div class="hero__wrapper">
-        <div class="hero__left" data-aos="fade-left">
+        <div class="hero__left">
           <div class="hero__left__wrapper">
 
             <h1 class="hero__heading">Shop the dream </h1>
             <p class="hero__info">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur
-              adipisicing elit. Animi, at rerum praesentium quas suscipit reprehenderit possimus ex omnis similique quis
-              corporis magnam deserunt harum nobis soluta consequatur eaque neque sit.
+              adipisicing elit. Animi, at omnis similique quis
+              corporis magna neque sit.
             </p>
             <div class="button__wrapper">
               <a href="#ourSpecials" class="button primary-btn">Explore More</a>
@@ -92,7 +122,7 @@
             </div>
           </div>
         </div>
-        <div class="hero__right" data-aos="fade-right">
+        <div class="hero__right">
           <div class="hero__imgWrapper">
             <img src="images/light_ccexpress.png">
           </div>
@@ -102,10 +132,10 @@
   </section>
   <!-- End Hero Section -->
   <!-- Store Info Section -->
-  <section id="storeInfo" data-aos="fade-up">
+  <section id="storeInfo">
     <div class="container">
       <div class="storeInfo__wrapper">
-       
+
         <div class="storeInfo__item">
           <div class="storeInfo__icon">
             <img src="./images/clock (1).png" alt="clock icon" width="100px" height="100px">
@@ -165,7 +195,7 @@
             <div class="ourSpecials__item__stars">
               <img src="./images/rating (2).png" alt="3 stars">
             </div>
-            <p class="ourSpecials__item__text">
+            <p class="ourSpecials__item__text ">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit unde ex temporibus sapiente rem nihil in
               vel ad, consequuntur minus perferendis et sint, dolorem atque. Nostrum doloribus iste blanditiis ipsam,
               temporibus esse, enim vitae est quos dignissimos quasi. Eum.
@@ -198,7 +228,7 @@
           <h2 class="ourSpecials__title">
             Our Specials
           </h2>
-          <p class="ourSpecials__text">
+          <p class="ourSpecials__text textToModify">
             All of our products are prepared with love at our factory to ensure the highest quality is
             delivered to our customers
           </p>
@@ -280,16 +310,22 @@
         <div class="col-md-6 discount__images">
           <div class="row">
             <div class="discount__img1 col">
-              <img src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnVybml0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Food img">
+              <img
+                src="https://images.unsplash.com/photo-1592078615290-033ee584e267?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZnVybml0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="Food img">
             </div>
             <div class="discount__img2 col">
-              <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZnVybml0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60" alt="Food img">
+              <img
+                src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZnVybml0dXJlfGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="Food img">
             </div>
             <div class="discount__img3 col">
-              <img src="https://images.unsplash.com/photo-1613252036716-e1efc9788e5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGZ1cm5pdHVyZXxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60" alt="Food img">
+              <img
+                src="https://images.unsplash.com/photo-1613252036716-e1efc9788e5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGZ1cm5pdHVyZXxlbnwwfDF8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="Food img">
             </div>
           </div>
-          
+
         </div>
         <div class="col-md-6 discount__info">
           <h3 class="discount__text"> 20% OFF</h3>
@@ -370,16 +406,18 @@
     <div class="container">
       <div class="row">
         <div class=" col-lg-5 col-sm-12" data-aos="fade-right" style="margin-right: 40px;">
-         <article>
-          <h2 class="whyUs__title mt-5">
-            Why Choose Our Products
-          </h2>
-          <p class="whyUs__text">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et delectus consequuntur sapiente qui, maxime quod
-            rerum consequatur vel? Ullam suscipit, amet tenetur molestias corporis voluptate ea vero ab quis sequi
-            consectetur ex accusantium enim inventore id voluptatem, fugit non odit? P&#xEB;rsh&euml;ndetje! &#xC7;kemi! &#xCB;sht&euml; nj&euml; projekt i &#xE7;muar
-          </p>
-        </article>
+          <article>
+            <h2 class="whyUs__title mt-5">
+              Why Choose Our Products
+            </h2>
+            <p class="whyUs__text">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et delectus consequuntur sapiente qui, maxime
+              quod
+              rerum consequatur vel? Ullam suscipit, amet tenetur molestias corporis voluptate ea vero ab quis sequi
+              consectetur ex accusantium enim inventore id voluptatem, fugit non odit? P&#xEB;rsh&euml;ndetje!
+              &#xC7;kemi! &#xCB;sht&euml; nj&euml; projekt i &#xE7;muar
+            </p>
+          </article>
         </div>
         <div class=" col" data-aos="fade-left">
           <div class="whyUs__items__wrapper">
@@ -498,7 +536,7 @@
             <tfoot>
               <tr>
                 <td colspan="2" class="text-end">Total:</td>
-                <td >$950</td>
+                <td>$950</td>
               </tr>
             </tfoot>
           </table>
@@ -536,7 +574,7 @@
             <tfoot>
               <tr>
                 <td colspan="2" class="text-end">Total:</td>
-                <td >$160</td>
+                <td>$160</td>
               </tr>
             </tfoot>
           </table>
@@ -550,82 +588,108 @@
   <!-- Testimonial Section -->
   <section id="testimonial">
     <div class="container">
-      <div class="testimonial__wrapper" data-aos="fade-up">
-        <h2 class="testimonial__title">What Our Customers Say</h2>
-        <div class="testimonial__items__wrapper">
-          <div class="testimonial__item">
-            <div class="testimonial__item__img">
-              <img
-                src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80"
-                alt="Sayed Ahmed">
-            </div>
-            <div class="testimonial__item__info">
-              <h3 class="testimonial__item__name">Inara</h3>
-              <div class="testimonial__item__stars">
-                <img src="./images/rating (2).png" alt="3 star">
+
+      <h2 class="testimonial__title">What Our Customers Say</h2>
+      <div class="testimonial__items__wrapper">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="testimonial__item">
+              <div class="testimonial__item__img">
+                <img
+                  src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=389&q=80"
+                  alt="Sayed Ahmed">
               </div>
-              <p class="testimonial__item__text">
-                “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque impedit dignissimos, quasi architecto
-                dolor molestias magnam quis nihil voluptas ratione?”
-              </p>
+              <div class="testimonial__item__info">
+                <h3 class="testimonial__item__name">Inara</h3>
+                <div class="testimonial__item__stars">
+                  <img src="./images/rating (2).png" alt="3 star">
+                </div>
+                <p class="testimonial__item__text">
+                  “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque impedit dignissimos, quasi architecto
+                  dolor molestias magnam quis nihil voluptas ratione?”
+                </p>
+              </div>
             </div>
           </div>
-          <div class="testimonial__item">
-            <div class="testimonial__item__img">
-              <img
-                src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
-                alt="Sayed Ahmed">
-            </div>
-            <div class="testimonial__item__info">
-              <h3 class="testimonial__item__name">Hana</h3>
-              <div class="testimonial__item__stars">
-                <img src="./images/rating (2).png" alt="3 star">
+          <div class="col-md-6">
+            <div class="testimonial__item ">
+              <div class="testimonial__item__img">
+                <img
+                  src="https://images.unsplash.com/photo-1525134479668-1bee5c7c6845?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+                  alt="Sayed Ahmed">
               </div>
-              <p class="testimonial__item__text">
-                “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque impedit dignissimos, quasi architecto
-                dolor molestias magnam quis nihil voluptas ratione?”
-              </p>
-            </div>
-          </div>
-          <div class="testimonial__item">
-            <div class="testimonial__item__img">
-              <img
-                src="https://images.unsplash.com/photo-1598106755735-3ebfced1d38b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
-                alt="Sayed Ahmed">
-            </div>
-            <div class="testimonial__item__info">
-              <h3 class="testimonial__item__name">Omer</h3>
-              <div class="testimonial__item__stars">
-                <img src="./images/rating (2).png" alt="3 star">
+              <div class="testimonial__item__info">
+                <h3 class="testimonial__item__name">Hana</h3>
+                <div class="testimonial__item__stars">
+                  <img src="./images/rating (2).png" alt="3 star">
+                </div>
+                <p class="testimonial__item__text">
+                  “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque impedit dignissimos, quasi architecto
+                  dolor molestias magnam quis nihil voluptas ratione?”
+                </p>
               </div>
-              <p class="testimonial__item__text">
-                “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque impedit dignissimos, quasi architecto
-                dolor molestias magnam quis nihil voluptas ratione?”
-              </p>
-            </div>
-          </div>
-          <div class="testimonial__item">
-            <div class="testimonial__item__img">
-              <img
-                src="https://images.unsplash.com/photo-1633368689270-9d9afa6b8aa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
-                alt="Sayed Ahmed">
-            </div>
-            <div class="testimonial__item__info">
-              <h3 class="testimonial__item__name">Nart</h3>
-              <div class="testimonial__item__stars">
-                <img src="./images/rating (2).png" alt="3 star">
-              </div>
-              <p class="testimonial__item__text">
-                “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque impedit dignissimos, quasi architecto
-                dolor molestias magnam quis nihil voluptas ratione?”
-              </p>
             </div>
           </div>
         </div>
+
+    
+
+        <div class="row moreReviews mt-5">
+          <div class="col-md-6">
+            <div class="testimonial__item">
+              <div class="testimonial__item__img">
+                <img
+                  src="https://images.unsplash.com/photo-1598106755735-3ebfced1d38b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+                  alt="Sayed Ahmed">
+              </div>
+              <div class="testimonial__item__info">
+                <h3 class="testimonial__item__name">Omer</h3>
+                <div class="testimonial__item__stars">
+                  <img src="./images/rating (2).png" alt="3 star">
+                </div>
+                <p class="testimonial__item__text">
+                  “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque impedit dignissimos, quasi architecto
+                  dolor molestias magnam quis nihil voluptas ratione?”
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="testimonial__item ">
+              <div class="testimonial__item__img">
+                <img
+                src="https://images.unsplash.com/photo-1633368689270-9d9afa6b8aa8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80"
+                alt="Sayed Ahmed">
+              </div>
+              <div class="testimonial__item__info">
+                <h3 class="testimonial__item__name">Roel</h3>
+                <div class="testimonial__item__stars">
+                  <img src="./images/rating (2).png" alt="3 star">
+                </div>
+                <p class="testimonial__item__text">
+                  “Lorem, ipsum dolor sit amet consectetur adipisicing elit. Atque impedit dignissimos, quasi architecto
+                  dolor molestias magnam quis nihil voluptas ratione?”
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div id="showReviews" class="row justify-content-center mt-5 mb-5">
+          <button id="toggleReviews" class="button toggleButton">Show More <span class="toggle-icon">&#x25BC;</span> 
+          </button>
+        </div>
+
+
       </div>
     </div>
   </section>
   <!-- End Testimonial Section -->
+
+  <div class="elementToRemove">
+    <h1>Remove this element with jQuery</h1>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -665,89 +729,90 @@
                 </a>
               </li>
               <li>
-                <a href="https://www.twitter.com" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                    stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-twitter">
+                <a href="https://wa.me/045849704" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                     <path
-                      d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                      d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                      fill="currentColor" class="feather" />
                   </svg>
                 </a>
+
               </li>
             </ol>
           </div>
         </div>
         <div class="col-8">
-        <ul class="row">
-          
-          <li class="col">
-            <h3 class="footer__text__title">
-              Links
-            </h3>
-            <ol class="footer__text">
-              <li>
-                <a href="/index.html">Home</a>
-              </li>
-              <li>
-                <a href="./products.html">Products</a>
-              </li>
-              <li>
-                <a href="./order.html">Order Now</a>
-              </li>
-              <li>
-                <a href="./about.html">About Us</a>
-              </li>
-              <li>
-                <a href="./contact.html">Contact Us</a>
-              </li>
-            </ol>
-          </li>
-        
-          <li class="col">
-            <h3 class="footer__text__title">
-              Support
-            </h3>
-            <ol class="footer__text">
-              <li>
-                <a href="#">Contact</a>
-              </li>
-              <li>
-                <a href="#">Support Center</a>
-              </li>
-              <li>
-                <a href="#">Feedback</a>
-              </li>
-            </ol>
-          </li>
-        
-          <li class="col">
-            <h3 class="footer__text__title">
-              Contact
-            </h3>
-            <address>
-            <ol class="footer__text">
-              <li>
-                <a href="#">+38345123123</a>
-              </li>
-              <li>
-                <abbr title="Click to send an email">
-                  <a href="mailto:arrshy.furniture@gmail.com">arrshy.furniture@gmail.com</a>
-                </abbr>
-              </li>
-              <li>
-                <a href="#">Prishtinë, Kosovë</a>
-              </li>
-            </ol>
-          </address>
-          </li>
-        </ul>
-      </div>
+          <ul class="row">
+
+            <li class="col">
+              <h3 class="footer__text__title">
+                Links
+              </h3>
+              <ol class="footer__text">
+                <li>
+                  <a href="/index.html">Home</a>
+                </li>
+                <li>
+                  <a href="./products.html">Products</a>
+                </li>
+                <li>
+                  <a href="./order.html">Order Now</a>
+                </li>
+                <li>
+                  <a href="./about.html">About Us</a>
+                </li>
+                <li>
+                  <a href="./contact.html">Contact Us</a>
+                </li>
+              </ol>
+            </li>
+
+            <li class="col">
+              <h3 class="footer__text__title">
+                Support
+              </h3>
+              <ol class="footer__text">
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+                <li>
+                  <a href="#">Support Center</a>
+                </li>
+                <li>
+                  <a href="#">Feedback</a>
+                </li>
+              </ol>
+            </li>
+
+            <li class="col">
+              <h3 class="footer__text__title">
+                Contact
+              </h3>
+              <address>
+                <ol class="footer__text">
+                  <li>
+                    <a href="#">+38345123123</a>
+                  </li>
+                  <li>
+                    <abbr title="Click to send an email">
+                      <a href="mailto:arrshy.furniture@gmail.com">arrshy.furniture@gmail.com</a>
+                    </abbr>
+                  </li>
+                  <li>
+                    <a href="#">Prishtinë, Kosovë</a>
+                  </li>
+                </ol>
+              </address>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </footer>
 
   <!-- End Footer -->
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
@@ -755,46 +820,10 @@
   <script src="js/main.js"></script>
   <script src="js/script.js"></script>
 
-  <script>
-    // Set the target date to 1 day from now
-    const targetDate = new Date();
-    targetDate.setDate(targetDate.getDate() + 1);
-
-    // Update the countdown every second
-    const countdownInterval = setInterval(updateCountdown, 1000);
-
-    function updateCountdown() {
-      // Get the current date and time
-      const currentDate = new Date();
-
-      // Calculate the difference between the target date and the current date
-      const timeDifference = targetDate - currentDate;
-
-      // Calculate hours, minutes, and seconds
-      const hours = Math.floor(timeDifference / (1000 * 60 * 60));
-      const minutes = Math.floor((timeDifference % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((timeDifference % (1000 * 60)) / 1000);
-
-      // Display the countdown in the format hh:mm:ss
-      const formattedTime = padZero(hours) + ':' + padZero(minutes) + ':' + padZero(seconds);
-
-      // Update the HTML element with the id 'time-left'
-      document.getElementById('time-left').innerText = formattedTime;
-
-      // Check if the countdown has reached zero
-      if (timeDifference <= 0) {
-        clearInterval(countdownInterval);
-        document.getElementById('time-left').innerText = '00:00:00';
-      }
-    }
-
-    function padZero(number) {
-      // Add leading zero if the number is less than 10
-      return (number < 10 ? '0' : '') + number;
-    }
-  </script>
 
   <script src="js/class.js"></script>
+  <script src="js/jquery.js"></script>
+
 </body>
 
 </html>

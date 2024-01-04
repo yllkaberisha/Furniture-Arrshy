@@ -607,8 +607,8 @@ td {
 	color: var(--black-1);
 }
 .testimonial__items__wrapper {
-	display: grid;
-	grid-template-columns: 1fr;
+	/* display: grid; */
+	/* grid-template-columns: 1fr; */
 	gap: 16px;
 	color: var(--white-3)
 }
@@ -645,6 +645,9 @@ td {
 .testimonial__item__text {
 	font-size: 14px;
 }
+
+
+
 @media only screen and (min-width: 768px) {
 	.testimonial__wrapper {
 		max-width: 900px;
@@ -659,6 +662,7 @@ td {
 	}
 	.testimonial__item {
 		padding: 32px;
+    height: 300px;
 	}
 	.testimonial__item__name {
 		font-size: 18px;
