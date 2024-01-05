@@ -30,7 +30,9 @@ function validateForm() {
   function submitForm() {
     if (validateForm()) {
       alert("Payment successful");
-      window.location.href = "http://127.0.0.1:5500/index.html";
+      // window.location.href = "http://127.0.0.1:5500/index.html";
+      var baseURL = window.location.origin;
+      window.location.href = baseURL + '/index.html';
     } else {
     }
     return false;

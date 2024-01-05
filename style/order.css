@@ -1,18 +1,10 @@
-
-body {
-    text-align: center;
-}
-
 #form {
 	padding: 136px 0;
-   display: inline-block;
-	
 }
 h3.form__title {
 	font-size: 28.8px;
 	color: var(--black-1);
 	font-weight: 600;
-	justify-content: center;
 }
 .form__wrapper {
 	padding:48px 0;
@@ -64,7 +56,6 @@ h3.form__title {
 	border-radius: 8px;
 	margin-top: 5px;
 	color: var(--black-2);
-
 }
 .form__group textarea {
 	resize: vertical;
