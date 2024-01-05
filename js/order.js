@@ -71,9 +71,14 @@ function validateForm(){//
     //productInput
     //quantity
     //color
-    //note
- 
+    //note  
+    if (!document.querySelector('.error')) {
+        alert('Form submitted successfully!');
+        form.reset();  // Reset the form after successful submission
+    }
 }
+ 
+
 function setError(element,errorMessage){
     const parent = element.parentElement;
     parent.classList.add('error');
