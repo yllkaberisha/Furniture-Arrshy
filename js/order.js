@@ -8,12 +8,15 @@ let quantityInput= document.querySelector('#guestNumber');
 let colorInput= document.querySelector('#Color');
 let noteInput= document.querySelector('#note');
 
-let errors = false;
+//let errors = false;
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+   
+    validateForm();
+   });
 
-function changeWindowLocation() {
-    window.location.href='http://127.0.0.1:5500/orderDetails.html'
-}
 function validateForm() {
+    
     // Clear previous errors
     clearErrors();
 }
@@ -22,50 +25,46 @@ function validateForm(){//
     //firstName
     if(firstNameInput.value.trim()===''||firstNameInput.value.trim()==null){
         setError(firstNameInput, 'Name can not be empty');
-        errors=true;
+     
     } 
 
     // lastName
     if (lastNameInput.value.trim() === '' || lastNameInput.value.trim() === null) {
         setError(lastNameInput, 'Last Name can not be empty');
-        errors=true;
-    }
-    
+        
+    } 
 
     // email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value.trim())) {
         setError(emailInput, 'Invalid email address');
-        errors=true;
-    }
-    
+        
+    } 
 
     // productType
     if (productTypeInput.value === 'Choose') {
         setError(productTypeInput, 'Please select a product type');
-        errors=true;
+        
     }
   
     // quantity
     if (quantityInput.value.trim() === '' || quantityInput.value <= 0) {
         setError(quantityInput, 'Quantity must be a positive number');
-        errors=true;
+        
     }
-   
 
     // color
     if (colorInput.value === 'Choose') {
         setError(colorInput, 'Please select a color');
-        errors=true;
+        
     }
     
 
     // note
     if (noteInput.value.trim() === '' || noteInput.value.trim() === null) {
         setError(noteInput, 'Note can not be empty');
-        errors=true;
+        
     }
-   
 
     //lastName
     //email
@@ -73,8 +72,8 @@ function validateForm(){//
     //quantity
     //color
     //note
+ 
 }
-
 function setError(element,errorMessage){
     const parent = element.parentElement;
     parent.classList.add('error');
@@ -93,9 +92,15 @@ function clearErrors() {
 }
 
 
+
 const submitButton = document.querySelector('.btn.primary-btn');
-submitButton.addEventListener('click', validateForm);
-submitButton.addEventListener('click', clearErrors);
+submitButton.addEventListener('click', () => {
+    clearErrors(); // Clear errors before revalidating
+    validateForm();
+});
+
+//submitButton.addEventListener('click', validateForm);
+//submitButton.addEventListener('click', clearErrors);
 
 
 
