@@ -88,6 +88,9 @@ function clearErrors() {
 }
 
 
+
+
+
 const submitButton = document.querySelector('.btn.primary-btn');
 submitButton.addEventListener('click', validateForm);
 submitButton.addEventListener('click', clearErrors);
