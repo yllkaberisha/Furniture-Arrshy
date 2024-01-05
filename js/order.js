@@ -95,6 +95,7 @@ function clearErrors() {
 
 form.addEventListener('submit', (event)=>{
     event.preventDefault();
+    validateForm();
     if(errors === false) {
     changeWindowLocation();
     }
