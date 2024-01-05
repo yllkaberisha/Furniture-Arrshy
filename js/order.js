@@ -11,8 +11,17 @@ let noteInput= document.querySelector('#note');
 let errors = false;
 
 function changeWindowLocation() {
-    window.location.href='http://127.0.0.1:5500/orderDetails.html'
+    var baseURL = window.location.origin;
+    window.location.href = baseURL + '/orderDetails.html';
 }
+
+form.addEventListener('submit', (event)=>{
+    event.preventDefault();
+    validateForm();
+    if(errors === false) {
+    changeWindowLocation();
+    }})
+
 function validateForm() {
     // Clear previous errors
     clearErrors();
