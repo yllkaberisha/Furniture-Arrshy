@@ -7,6 +7,7 @@
     <title>Arrshy's Furniture</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/orderDetails.css">
 </head>
 <body>
     <!-- Nav Section -->
@@ -59,7 +60,7 @@
   <!-- End Nav Section -->
 
    <!-- Contact Form Section -->
-  <section class="form" data-aos="fade-down">
+  <!-- <section class="form" data-aos="fade-down">
     <div class="container">
       <h3 class="form__title">
         Contact & Inquiry <p style="color: var(--black-2);" id="timeOfTheDay"> Good afternoon!</p>
@@ -67,8 +68,8 @@
       <div class="form__wrapper">
         <form name="contact" id="contact" action="https://formspree.io/f/xjvnvkqb" method="POST">
           <div class="form__group">
-            <label for="firstName">First Name</label>
-            <input type="text" id="firstName" name="First Name" autocomplete="off">
+            <label for="email">Confirm Email</label>
+            <input type="email" id="confirmEmail" name="First Name" autocomplete="off">
           </div>
           <div class="form__group">
             <label for="lastName">Last Name</label>
@@ -121,9 +122,40 @@
 
 
     </div>
-  </section>
-  <!-- End Contact Form Section-->
+  </section> -->
+  <!-- End Contact Form Section -->
+  <section class="checkout">
+    <h2 class="payment-method">Payment Method</h2>
+    <div class="choose-card">
+      <div class="visa-card">
+        <img src="images/visa.png" alt="">
+      </div>
+      <div class="paypal">
+        <img src="images/paypal.png" alt="">
+      </div>
+    </div>
 
+    <form class="form" id="paymentForm" onsubmit="return submitForm()">
+      <div class="payment-group">
+        <label for="cardName">Name on Card</label>
+        <input type="text" name="cardName" id="cardName" placeholder="John Doe">
+        <div class="error-message" id="cardNameError"></div>
+      </div>
+      <div class="payment-group">
+        <label for="cardNumber">Card Number</label>
+        <input type="number" name="cardNumber" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx">
+        <div class="error-message" id="cardNumberError"></div>
+      </div>
+      <div class="payment-group">
+        <label for="expDate">Expiration Date</label>
+        <input type="text" name="expDate" id="expDate" placeholder="MM/YY">
+        <div class="error-message" id="expDateError"></div>
+      </div>
+      <div class="payment-submit">
+        <input type="submit" name="submit" id="submitCheckout" value="Make a Payment">
+      </div>
+    </form>
+  </section>
 
 <!-- Footer -->
    <footer>
@@ -238,6 +270,7 @@
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
   <script src="js/main.js"></script>
+   <script src="js/orderDetails.js"></script>
 
 </body>
 </html>
