@@ -88,10 +88,17 @@
         <input type="text" name="cardName" id="cardName" placeholder="Your Name">
         <div class="error-message" id="cardNameError"></div>
       </div>
-      <div class="payment-group">
-        <label for="cardNumber">Card Number</label>
-        <input type="number" name="cardNumber" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx">
-        <div class="error-message" id="cardNumberError"></div>
+      <div class="payment-group horizontal">
+        <div class="left">
+          <label for="cardNumber">Card Number</label>
+          <input type="number" name="cardNumber" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx">
+          <div class="error-message" id="cardNumberError"></div>
+      </div>
+      <div class="right">
+          <label for="cvv">CVV</label>
+          <input type="number" name="cvv" id="cvv" placeholder="XXX">
+          <div class="error-message" id="cvvError"></div>
+      </div>
       </div>
       <div class="payment-group">
         <label for="expDate">Expiration Date</label>

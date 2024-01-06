@@ -67,6 +67,15 @@ body {
     gap:0.5rem;
 }
 
+.payment-group.horizontal {
+    flex-direction: row;
+    justify-content: space-between;
+}
+.right,
+.left {
+    width:48%;
+}
+
 label,input {
     display: block;
     width:100%;
