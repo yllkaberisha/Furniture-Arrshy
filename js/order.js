@@ -29,6 +29,7 @@ function validateForm() {
 }
 
 function validateForm(){//
+    errors = false;
     //firstName
     if(firstNameInput.value.trim()===''||firstNameInput.value.trim()==null){
         setError(firstNameInput, 'Name can not be empty');
@@ -76,6 +77,12 @@ function validateForm(){//
         errors=true;
     }
    
+    if(errors) {
+        return
+    }
+    else{
+        errors = false;
+    }
 
     //lastName
     //email
