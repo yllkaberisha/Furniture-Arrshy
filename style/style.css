@@ -153,26 +153,33 @@ a {
     border-radius: 8px;
     font-size: 15px;
     padding: 12px 20px;
+    border: 1px solid transparent;
 }
 
 .button:hover{
     background-color: transparent;
- 
-    transition: .4s ease-in;
-}
+    cursor: pointer;
+ }
+
 .primary-btn , nav .primary-btn {
     color: var(--white-1);
     background: var(--green-1);
-}
-nav .primary-btn:hover , .discount__wrapper .primary-btn:hover{
-    color: var(--green-2);
-    border: 1px solid var(--green-2);
+    border: 1px solid transparent;
+
 }
 
-.primary-btn:hover{
-    color: var(--green-1);
-    border: 1px solid var(--green-1);
+.container div .primary-btn:hover{
+  color: var(--green-1);
+  border: 1px solid var(--green-1);
+  background-color: transparent;
+  transition: .4s ease-in;
 }
+
+nav .primary-btn:hover , .discount__wrapper .primary-btn:hover{
+  color: var(--green-2) !important;
+  border: 1px solid var(--green-2) !important;
+}
+
 
 @media only screen and (min-width: 700px) {
     .btn {
