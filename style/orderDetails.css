@@ -9,15 +9,15 @@ body {
 
 
 .payment-method {
-    margin-top:3rem;
+    margin-top:1rem;
 }
 
 .checkout {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    margin-top:1.5rem;
     align-items: center;
-    gap:1.5rem;
+    gap:0.5rem;
 }
 
 .choose-card {
@@ -82,8 +82,6 @@ body {
     width:48%;
 }
 
-
-
 label,input {
     display: block;
     width:100%;
@@ -109,10 +107,14 @@ input[type="submit"] {
     margin-top:1rem;
 }
 
+input[type="submit"]:hover {
+    background-color: #7bc2d7;
+    transition: all 0.5s linear;
+}
+
 input::placeholder {
     color: #ccc5c5; 
 }
-
 
 .payment-terms {
     display: flex;
