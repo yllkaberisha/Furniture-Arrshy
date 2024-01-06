@@ -60,85 +60,32 @@
   <!-- End Nav Section -->
 
    <!-- Contact Form Section -->
-  <!-- <section class="form" data-aos="fade-down">
-    <div class="container">
-      <h3 class="form__title">
-        Contact & Inquiry <p style="color: var(--black-2);" id="timeOfTheDay"> Good afternoon!</p>
-      </h3>
-      <div class="form__wrapper">
-        <form name="contact" id="contact" action="https://formspree.io/f/xjvnvkqb" method="POST">
-          <div class="form__group">
-            <label for="email">Confirm Email</label>
-            <input type="email" id="confirmEmail" name="First Name" autocomplete="off">
-          </div>
-          <div class="form__group">
-            <label for="lastName">Last Name</label>
-            <input type="text" id="lastName" name="Last Name" required autocomplete="on">
-          </div>
-          <div class="form__group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="Email" required>
-          </div>
-
-          <div class="form__group">
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="Phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}" required>
-            <small class="form__hint">Format: 044-111-111</small>
-          </div>
-
-          <div class="form__group">
-          <label for="qyteti">City:</label>
-          <input list="qytetet" name="City" id="qyteti">
-
-          <datalist id="qytetet">
-            <option value="Prishtinë">
-            <option value="Skenderaj">
-            <option value="Pejë">
-            <option value="Prizren">
-            <option value="Podujevë">
-          </datalist>
-          </div>
-          
-          <div class="form__group">
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="Subject" required>
-          </div>
-          <div class="form__group form__group__full">
-            <label for="message">Message</label>
-            <textarea name="Message" id="message" cols="30" rows="6" required placeholder="Write us here! We want to hear your opinion :) "></textarea>
-          </div>
-
-          <button type="submit" class="button primary-btn" >Send</button>
-          <div>
-            <div id="load" style="background: #237088;height:10px;width:10px;display: inline;"></div>
-            <output id="my-form-status"name="formOutput" class="text-center align-middle"></output>
-          </div>
-
-        </form>
-
-        <keygen id="myKeygen" name="security" form="contact">
-
+   <section class="checkout">
+     <h2 class="payment-method">Payment Method</h2>
+     <div class="choose-card">
+       <div class="visa-card">
+        <div class="image visa-image" id="visaImage">
+         <img src="images/visa.png" alt="">
+        </div>
+        <div class="radio visa-radio">
+          <input type="radio" name="visa" id="visa">
+        </div>
+        </div>
+       <div class="paypal">
+        <div class="image paypal-image" id="paypalImage">
+          <img src="images/paypal.png" alt="">
+        </div>
+        <div class="radio paypal-radio" >
+          <input type="radio" name="visa" id="paypal">
+        </div>
+        </div>
+        
       </div>
-
-
-    </div>
-  </section> -->
-  <!-- End Contact Form Section -->
-  <section class="checkout">
-    <h2 class="payment-method">Payment Method</h2>
-    <div class="choose-card">
-      <div class="visa-card">
-        <img src="images/visa.png" alt="">
-      </div>
-      <div class="paypal">
-        <img src="images/paypal.png" alt="">
-      </div>
-    </div>
-
-    <form class="form" id="paymentForm" onsubmit="return submitForm()">
+      
+      <form class="form" id="paymentForm" onsubmit="return submitForm()">
       <div class="payment-group">
         <label for="cardName">Name on Card</label>
-        <input type="text" name="cardName" id="cardName" placeholder="John Doe">
+        <input type="text" name="cardName" id="cardName" placeholder="Your Name">
         <div class="error-message" id="cardNameError"></div>
       </div>
       <div class="payment-group">
@@ -156,9 +103,10 @@
       </div>
     </form>
   </section>
-
-<!-- Footer -->
-   <footer>
+  <!-- End Contact Form Section -->
+  
+  <!-- Footer -->
+  <footer>
     <div class="container">
       <div class="row footer__wrapper">
         <div class="col-4">

@@ -20,8 +20,8 @@ body {
     gap:1rem;
 }
 
-.visa-card, 
-.paypal {
+.image.visa-image, 
+.image.paypal-image {
     border: 1px solid #878383;
     padding:12px;
     border-radius: 7px;
@@ -30,10 +30,17 @@ body {
     background-color: #fff;
 }
 
-.visa-card:hover, 
-.paypal:hover{
+.image.visa-image:hover,
+.image.visa-image:focus, 
+.image.paypal-image:hover,
+.image.paypal-image:focus{
     cursor: pointer;
-    border:1px solid #000;
+    border:2px solid #000;
+}
+
+.radio {
+    outline:none;
+    border:none;
 }
 
 .visa-card img {
@@ -93,5 +100,18 @@ input::placeholder {
 
 .error-message {
     color: red;
-  }
+}
+/* end error */
+  
+input[type='radio'] {
+    outline:none;
+    border:none;
+    margin-top:1rem;
+}
+
+.focus {
+    outline: 2px solid #237088;
+}
+
+
 
