@@ -105,6 +105,21 @@ input::placeholder {
     color: #ccc5c5; 
 }
 
+
+.payment-terms {
+    display: flex;
+    gap:1rem;
+    align-items: center;
+}
+
+.terms-input input {
+    width:24px;
+    height:24px;
+}
+
+.terms-text {
+    margin:0;
+}
 /* error message */
 
 .error-message {
