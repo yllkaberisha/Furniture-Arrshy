@@ -2,6 +2,7 @@ const visaRadio = document.getElementById('visa')
 const paypalRadio = document.getElementById('paypal')
 const visaImage = document.getElementById('visaImage')
 const paypalImage = document.getElementById('paypalImage')
+const agreeToTerms = document.getElementById('agreeToTerms')
 
 visaImage.addEventListener('click', function() {
     removeFocus();
@@ -25,36 +26,10 @@ paypalRadio.addEventListener('click', function() {
     paypalImage.classList.add('focus');
 });
 
-// Function to remove the "focus" class from both images
 function removeFocus() {
     visaImage.classList.remove('focus');
     paypalImage.classList.remove('focus');
 }
-
-
-// visaFocus.addEventListener('click', function() {
-//   visaRadio.checked = true;
-//   if(visaRadio.checked) {
-//   visaFocus.classList.add('focus')
-//   } else {
-//     visaFocus.classList.remove('focus')
-//   }
-// });
-
-// paypalFocus.addEventListener('click', function() {
-//   paypalRadio.checked = true;
-//   paypalFocus.classList.toggle('focus')
-// });
-
-// visaRadio.addEventListener('change', function() {
-//   if (visaRadio.checked) {
-//   }
-// });
-// paypalRadio.addEventListener('change', function() {
-//   if (paypalRadio.checked) {
-//       paypalFocus.focus();
-//   }
-// });
 
 function validateForm() {
     let cardName = document.getElementById("cardName").value;
@@ -81,6 +56,17 @@ function validateForm() {
       document.getElementById("expDateError").innerHTML = "Expiration Date is required";
       isValid = false;
     }
+
+    if (!agreeToTerms.checked) {
+      document.getElementById("termsError").innerHTML = "Please agree to our terms and conditions";
+      isValid = false;
+    }
+    
+    if(!visaRadio.checked && !paypalRadio.checked) {
+      document.getElementById("cardError").innerHTML = "Please choose one of our payment methods";
+      isValid = false;
+    }
+
 
     return isValid;
   }

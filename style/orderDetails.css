@@ -7,6 +7,11 @@ body {
     min-height: 100vh;
 }
 
+
+.payment-method {
+    margin-top:3rem;
+}
+
 .checkout {
     display: flex;
     flex-direction: column;
@@ -71,10 +76,13 @@ body {
     flex-direction: row;
     justify-content: space-between;
 }
+
 .right,
 .left {
     width:48%;
 }
+
+
 
 label,input {
     display: block;

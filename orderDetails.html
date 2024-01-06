@@ -65,22 +65,22 @@
      <div class="choose-card">
        <div class="visa-card">
         <div class="image visa-image" id="visaImage">
-         <img src="images/visa.png" alt="">
+          <img src="images/visa.png" alt="">
         </div>
         <div class="radio visa-radio">
           <input type="radio" name="visa" id="visa">
         </div>
-        </div>
-       <div class="paypal">
+      </div>
+      <div class="paypal">
         <div class="image paypal-image" id="paypalImage">
           <img src="images/paypal.png" alt="">
         </div>
         <div class="radio paypal-radio" >
           <input type="radio" name="visa" id="paypal">
         </div>
-        </div>
-        
       </div>
+    </div>
+    <div class="error-message" id="cardError"></div>
       
       <form class="form" id="paymentForm" onsubmit="return submitForm()">
       <div class="payment-group">
@@ -111,6 +111,7 @@
         </div>
         <p class="terms-text">I have read and agree to <a href="">Terms and conditions</a></p>
       </div>
+      <div class="error-message" id="termsError"></div>
       <div class="payment-submit">
         <input type="submit" name="submit" id="submitCheckout" value="Make a Payment">
       </div>
