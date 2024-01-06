@@ -32,9 +32,8 @@ h3.form__title {
 	visibility: hidden;
 
 }
-.success input{
-	border: 3px green solid;
-}
+
+
 .error input{
 	border: 3px red solid;
 }
@@ -53,11 +52,12 @@ h3.form__title {
 	width: 100%;
 	border: none;
 	background-color: white;
+	color: var(--black-2); 
 	font-size: 20px;
 	font-family: Raleway;
 	font-weight: 400px;
 	padding: 10px;
-	border-radius: 8px;
+	border-radius: 7px;
 	margin-top: 5px;
 	
 }
