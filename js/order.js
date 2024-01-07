@@ -56,12 +56,18 @@ function validateForm(){//
         setError(productTypeInput, 'Please select a product type');
         errors=true;
     }
-  
+    const MINIMUM_ALLOWED_VALUE = 5;
+    const MAXIMUM_ALLOWED_VALUE = 100;
     // quantity
     if (quantityInput.value.trim() === '' || quantityInput.value <= 0) {
         setError(quantityInput, 'Quantity must be a positive number');
         errors=true;
+    }else if (quantityInput.value < MINIMUM_ALLOWED_VALUE || quantityInput.value > MAXIMUM_ALLOWED_VALUE) {
+        setError(quantityInput, `Quantity must be between ${MINIMUM_ALLOWED_VALUE} and ${MAXIMUM_ALLOWED_VALUE}`);
+        errors = true;
     }
+    
+    
    
 
     // color
@@ -114,9 +120,7 @@ submitButton.addEventListener('click', () => {
     clearErrors(); // Clear errors before revalidating
     validateForm();
 });
-/*const submitButton = document.querySelector('.btn.primary-btn');
-submitButton.addEventListener('click', validateForm);
-submitButton.addEventListener('click', clearErrors);*/
+
 
 
 
