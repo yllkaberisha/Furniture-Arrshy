@@ -141,7 +141,6 @@ a {
 
 .button:hover{
     background-color: transparent;
- 
     transition: .4s ease-in;
 }
 .primary-btn , nav .primary-btn {
@@ -535,7 +534,7 @@ ol {
   .form__group label {
     font-size: 18px;
     font-family: Poppins;
-    color: var(--black-2);
+    color: var(--black-1);
     font-weight: 500;
   }
   
@@ -596,7 +595,7 @@ ol {
     border-radius: 8px;
     margin-top: 8px;
     color: var(--black-2);
-    border: 1px solid var(--black-1);
+    /* border: 1px solid var(--black-1); */
 
 }
 }
