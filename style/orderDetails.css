@@ -149,3 +149,64 @@ input[type='radio'] {
 
 
 
+
+/* Popup style */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius:10px;
+  }
+  
+  .popup-content {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .close {
+    color: #000;
+    position:fixed;
+    right:32px;
+    top:10px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .form {
+    position:relative;
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+  
+  .blur {
+    filter: blur(5px); 
+  }
+
+  .terms-paragraph {
+    font-size:16px;
+  }
+
+

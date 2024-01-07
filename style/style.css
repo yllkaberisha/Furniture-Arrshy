@@ -170,7 +170,7 @@ a {
 
 .container div .primary-btn:hover{
   color: var(--green-1);
-  border: 1px solid var(--green-1);
+  /* border: 1px solid var(--green-1); */
   background-color: transparent;
   transition: .4s ease-in;
 }
