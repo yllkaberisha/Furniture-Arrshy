@@ -162,6 +162,7 @@ input[type='radio'] {
     border: 1px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
+    border-radius:10px;
   }
   
   .popup-content {
@@ -170,9 +171,11 @@ input[type='radio'] {
   }
   
   .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+    color: #000;
+    position:fixed;
+    right:32px;
+    top:10px;
+    font-size: 36px;
     font-weight: bold;
     cursor: pointer;
   }
@@ -200,6 +203,10 @@ input[type='radio'] {
   
   .blur {
     filter: blur(5px); 
+  }
+
+  .terms-paragraph {
+    font-size:16px;
   }
 
 
