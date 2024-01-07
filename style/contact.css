@@ -10,7 +10,7 @@
     --green-1: #237088;
     --green-2: #bcdde7;
     --lightGreen-1: #565d65;  
-    --lightGreen-2: #f5fcf4;
+    --lightGreen-2: #c2c8c2fa;
     --lightGreen-3: #23708806;  
     --black-1: #3b413a;
     --black-2: #3f3c3c;
@@ -26,7 +26,7 @@
 
 body {
     font-family: Poppins;
-    background-color: #fffffff1;
+    background-color: #eae5e5f1;
     overflow-x: hidden;
 }
 
@@ -356,12 +356,12 @@ ol {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #706e6e;
+    background-color: #5e5d5d;
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #f2f2f2;
+    background-color: #acaaaa;
 }
 
 
