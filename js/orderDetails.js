@@ -73,11 +73,19 @@ function validateForm() {
 
   function submitForm() {
     if (validateForm()) {
-      alert("Payment successful");
-      // window.location.href = "http://127.0.0.1:5500/index.html";
-      var baseURL = window.location.origin;
-      window.location.href = baseURL + '/index.html';
+      // Show SweetAlert for successful payment
+      Swal.fire({
+        title: 'Payment Successful',
+        text: 'Thank you for your payment!',
+        icon: 'success',
+        confirmButtonText: 'Okay'
+      }).then((result) => {
+
+        var baseURL = window.location.origin;
+        window.location.href = baseURL + '/index.html';
+      });
     } else {
     }
     return false;
   }
+  
