@@ -114,3 +114,36 @@ function submitForm() {
   }
   return false;
 }
+
+
+// popup js
+
+document.addEventListener('DOMContentLoaded', function () {
+  const termsLink = document.getElementById('termsLink');
+  const popup = document.getElementById('popup');
+  const closePopup = document.getElementById('closePopup');
+  const overlay = document.getElementById('overlay');
+  const formContainer = document.querySelector('.form');
+
+  termsLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+    formContainer.classList.add('blur');
+  });
+
+  closePopup.addEventListener('click', function () {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+    formContainer.classList.remove('blur');
+  });
+
+  window.addEventListener('click', function (event) {
+    if (event.target === overlay) {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+      formContainer.classList.remove('blur');
+    }
+  });
+});
+
