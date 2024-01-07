@@ -56,8 +56,8 @@ function validateForm(){//
         setError(productTypeInput, 'Please select a product type');
         errors=true;
     }
-    const MINIMUM_ALLOWED_VALUE = 5;
-    const MAXIMUM_ALLOWED_VALUE = 100;
+    const MINIMUM_ALLOWED_VALUE = 10;
+    const MAXIMUM_ALLOWED_VALUE = 50;
     // quantity
     if (quantityInput.value.trim() === '' || quantityInput.value <= 0) {
         setError(quantityInput, 'Quantity must be a positive number');
