@@ -1,22 +1,24 @@
 body {
-    margin: 0;
+    margin: 0px;
     padding: 0;
     /* Make sure the body takes the full height of the viewport */
    
     justify-content: center;
     align-items:center;
-	
+    align-content: center;
+	align-self: center;	
     
 }
 
 #form {
-	padding:  136px 0;
+	
+	padding-right: 500px;
 	display:grid;
 	text-align:left;
 	overflow: hidden;
 	justify-content: center;
 	align-items: center;
-
+   
 
 }
 h3.form__title {
@@ -113,6 +115,7 @@ textarea:focus{
 	letter-spacing: 1.6px;
 	display:grid;
 	align-items: center;
+	margin-bottom: 15px;
 }
 @media only screen and (min-width: 700px) {
 
