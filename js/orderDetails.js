@@ -89,3 +89,15 @@ function validateForm() {
     return false;
   }
   
+  var termsElement = document.getElementById('terms');
+
+    termsElement.addEventListener('click', function() {
+        Swal.fire({
+          title: 'Terms and Conditions of Payment',
+          html: '<p>1. Payment must be made within 30 days of the invoice date.</p>' +
+                '<p>2. Late payments will incur a 5% late fee.</p>' +
+                '<p>3. Terms are subject to change without prior notice.</p>',
+          icon: 'info',
+          confirmButtonText: 'OK'
+      });
+    });
