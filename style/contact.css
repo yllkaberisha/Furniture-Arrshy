@@ -10,7 +10,7 @@
     --green-1: #237088;
     --green-2: #bcdde7;
     --lightGreen-1: #565d65;  
-    --lightGreen-2: #f5fcf4;
+    --lightGreen-2: #c2c8c2fa;
     --lightGreen-3: #23708806;  
     --black-1: #3b413a;
     --black-2: #3f3c3c;
@@ -26,7 +26,7 @@
 
 body {
     font-family: Poppins;
-    background-color: #fffffff1;
+    background-color: #eae5e5f1;
     overflow-x: hidden;
 }
 
@@ -141,7 +141,6 @@ a {
 
 .button:hover{
     background-color: transparent;
- 
     transition: .4s ease-in;
 }
 .primary-btn , nav .primary-btn {
@@ -356,12 +355,12 @@ ol {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #706e6e;
+    background-color: #5e5d5d;
     border-radius: 6px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #f2f2f2;
+    background-color: #acaaaa;
 }
 
 
@@ -535,7 +534,7 @@ ol {
   .form__group label {
     font-size: 18px;
     font-family: Poppins;
-    color: var(--black-2);
+    color: var(--black-1);
     font-weight: 500;
   }
   
@@ -596,7 +595,7 @@ ol {
     border-radius: 8px;
     margin-top: 8px;
     color: var(--black-2);
-    border: 1px solid var(--black-1);
+    /* border: 1px solid var(--black-1); */
 
 }
 }
