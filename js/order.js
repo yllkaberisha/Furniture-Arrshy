@@ -16,7 +16,7 @@ function changeWindowLocation() {
     console.log('changed window location')
 }
 
-form.addEventListener('submit', (event)=>{
+formOrder.addEventListener('submit', (event)=>{
     event.preventDefault();
     validateForm();
     if(errors === false) {
