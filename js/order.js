@@ -1,5 +1,5 @@
 
-const form = document.querySelector('#orderForm');
+const formOrder = document.querySelector('#orderForm');
 let firstNameInput= document.querySelector('#firstName');
 let lastNameInput= document.querySelector('#lastName');
 let emailInput= document.querySelector('#email');
