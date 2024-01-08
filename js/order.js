@@ -62,9 +62,12 @@ function validateForm(){//
     if (quantityInput.value.trim() === '' || quantityInput.value <= 0) {
         setError(quantityInput, 'Quantity must be a positive number');
         errors=true;
+        tryCatchFun(quantityInput.value)
     }else if (quantityInput.value < MINIMUM_ALLOWED_VALUE || quantityInput.value > MAXIMUM_ALLOWED_VALUE) {
         setError(quantityInput, `Quantity must be between ${MINIMUM_ALLOWED_VALUE} and ${MAXIMUM_ALLOWED_VALUE}`);
         errors = true;
+        tryCatchFun(quantityInput.value)
+
     }
     
     
@@ -122,6 +125,37 @@ submitButton.addEventListener('click', () => {
 });
 
 
+
+
+function tryCatchFun(number) {
+    console.log(number)
+    var x= number;
+    try {
+      if (x.trim() == "") throw "is empty";
+      if (isNaN(x)) throw "is not a number";
+      x = Number(x);
+  
+      // Use Number.MAX_VALUE to check if the number is too high
+      if (x > Number.MAX_VALUE) throw "is too high";
+  
+      if(x> 50) throw "is too high";
+  
+      // Use Number.MIN_VALUE to check if the number is too low
+      if (x < Number.MIN_VALUE) throw "is too low";
+  
+      // Use toExponential() to convert the number to exponential notation
+      const formattedNumber = x.toExponential();
+    //   message.innerHTML = "Formatted number: " + formattedNumber;
+      console.log(formattedNumber);
+    } catch (err) {
+    //   message.innerHTML = "Error: " + err + ".";
+    console.log(err);
+    } finally {
+    //   document.getElementById("demo").value = "";
+    console.log("finally")
+    }
+  }
+  
 
 
 

@@ -23,6 +23,10 @@
     //----------------------------------------------------------------
 
     //callback
+    $(".moreReviews").show("slow", function(){
+        console.log("The paragraph is now hidden");
+    });
+
     $(".moreReviews").hide("slow", function(){
         console.log("The paragraph is now hidden");
     });
