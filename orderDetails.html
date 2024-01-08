@@ -119,117 +119,240 @@
       <div class="error-message" id="cardError"></div>
 
       <form class="form" id="paymentForm" onsubmit="return submitForm()">
-      <div class="payment-group">
-        <label for="cardName">Name on Card</label>
-        <input type="text" name="cardName" id="cardName" placeholder="Your Name">
-        <div class="error-message" id="cardNameError"></div>
-      </div>
-      <div class="payment-group horizontal">
-        <div class="left">
-          <label for="cardNumber">Card Number</label>
-          <input type="number" name="cardNumber" id="cardNumber" placeholder="xxxx-xxxx-xxxx-xxxx">
-          <div class="error-message" id="cardNumberError"></div>
-      </div>
-      <div class="right">
-          <label for="cvv">CVV</label>
-          <input type="number" name="cvv" id="cvv" placeholder="XXX">
-          <div class="error-message" id="cvvError"></div>
-      </div>
-      </div>
-      <div class="payment-group">
-        <label for="expDate">Expiration Date</label>
-        <input type="text" name="expDate" id="expDate" placeholder="MM/YY">
-        <div class="error-message" id="expDateError"></div>
-      </div>
-      <div class="payment-terms">
-        <div class="terms-input">
-          <input type="checkbox" name="agreeToTerms" id="agreeToTerms">
+        <div class="payment-group">
+          <label for="cardName">Name on Card</label>
+          <input
+            type="text"
+            name="cardName"
+            id="cardName"
+            placeholder="Your Name"
+          />
+          <div class="error-message" id="cardNameError"></div>
         </div>
-        <p class="terms-text">I have read and agree to <a href="#" id="terms">Terms and conditions</a></p>
-      </div>
-      <div class="error-message" id="termsError"></div>
-      <div class="payment-submit">
-        <input type="submit" name="submit" id="submitCheckout" value="Make a Payment">
-      </div>
-    </form>
-  </section>
-  <!-- End Contact Form Section -->
-  
- <!-- Footer -->
- <footer>
-  <div class="container">
-    <div class="row footer__wrapper">
-      <div class="col-4">
-        <div class="footer__logo">
-          <a href="./index.html" class="logo">
-            <img src="./images/desk-lamp.png" alt="logo">
-            <h1>Arrshy's Furniture</h1>
-          </a>
+        <div class="payment-group horizontal">
+          <div class="left">
+            <label for="cardNumber">Card Number</label>
+            <input
+              type="number"
+              name="cardNumber"
+              id="cardNumber"
+              placeholder="XXXX XXXX XXXX XXXX"
+            />
+            <div class="error-message" id="cardNumberError"></div>
+          </div>
+          <div class="right">
+            <label for="cvv">CVV</label>
+            <input type="number" name="cvv" id="cvv" placeholder="XXX"/>
+            <div class="error-message" id="cvvError"></div>
+          </div>
         </div>
-        <p class="footer__desc">
-          Fill your home with uniqueness for your whole family.
+        <div class="payment-group">
+          <label for="expDate">Expiration Date</label>
+          <input type="text" name="expDate" id="expDate" placeholder="MM/YY" />
+          <div class="error-message" id="expDateError"></div>
+        </div>
+        <div class="payment-terms">
+          <div class="terms-input">
+            <input type="checkbox" name="agreeToTerms" id="agreeToTerms" />
+          </div>
+          <p class="terms-text">
+            I have read and agree to
+            <a href="#" id="termsLink">Terms and Conditions</a>
+          </p>
+        </div>
+        <div class="error-message" id="termsError"></div>
+        <div class="payment-submit">
+          <input
+            type="submit"
+            name="submit"
+            id="submitCheckout"
+            value="Make a Payment"
+          />
+        </div>
+      </form>
+    </section>
+    <!-- End Contact Form Section -->
+
+    <!-- Popup -->
+    <div id="popup" class="popup">
+      <div class="popup-content">
+        <span class="close" id="closePopup">&times;</span>
+        <h2>Terms and Conditions</h2>
+        <p class="terms-paragraph">
+          1. Acceptance of Terms By accessing or using this website and any
+          services provided herein, you agree to comply with and be bound by
+          these Terms and Conditions.
         </p>
-        <div class="footer__socials">
-          <h4 class="footer__socials__title">Follow us</h4>
-          <ol class="footer__socials__list">
-            <li>
-              <a href="https://www.facebook.com" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-facebook">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                  stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
-                  class="feather feather-instagram">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </a>
-            </li>
-            <li>
-              <a href="https://wa.me/045849704" target="_blank">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                  <path
-                    d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
-                    fill="currentColor" class="feather" />
-                </svg>
-              </a>
 
-            </li>
-          </ol>
-        </div>
+        <p class="terms-paragraph">
+          2. Use of the Site You agree to use the Site for lawful purposes only
+          and in a manner consistent with all applicable laws, regulations, and
+          these Terms and Conditions.
+        </p>
+
+        <p class="terms-paragraph">
+          3. Intellectual Property All content and materials available on the
+          Site, including but not limited to text, graphics, logos, icons,
+          images, audio clips, and software, are the property of Arrshy's
+          Furniture and are protected by applicable intellectual property laws.
+        </p>
+
+        <p class="terms-paragraph">
+          4. User Account To access certain features of the Site, you may be
+          required to create a user account. You are responsible for maintaining
+          the confidentiality of your account information and for all activities
+          that occur under your account.
+        </p>
+
+        <p class="terms-paragraph">
+          5. Privacy Our Privacy Policy governs the collection, use, and
+          disclosure of your personal information. By using the Site, you
+          consent to the terms of our Privacy Policy.
+        </p>
+
+        <p class="terms-paragraph">
+          6. Disclaimer of Warranties The Site is provided "as is" and "as
+          available" without any warranties of any kind, either expressed or
+          implied. Arrshy's Furniture does not warrant the accuracy,
+          completeness, or reliability of any content on the Site.
+        </p>
+
+        <p class="terms-paragraph">
+          7. Limitation of Liability In no event shall Arrshy's Furniture be
+          liable for any direct, indirect, incidental, consequential, or special
+          damages arising out of or in any way connected with the use of the
+          Site or any information provided on the Site.
+        </p>
+
+        <p class="terms-paragraph">
+          8. Governing Law These Terms and Conditions shall be governed by and
+          construed in accordance with the laws of Kosovo, without regard to its
+          conflict of law principles.
+        </p>
+
+        <p class="terms-paragraph">
+          9. Changes to Terms and Conditions Arrshy's Furniture reserves the
+          right to modify or update these Terms and Conditions at any time
+          without notice. It is your responsibility to review these Terms and
+          Conditions periodically.
+        </p>
+
+        <p class="terms-paragraph">
+          10. Contact Information If you have any questions or concerns about
+          these Terms and Conditions, please contact us at
+          <a href="mailto:arrshy.furniture@gmail.com"
+            >arrshy.furniture@gmail.com</a
+          >.
+        </p>
+
+        Last updated: [2024]
+
+        <!-- Add your actual terms and conditions content here -->
       </div>
-      <div class="col-8">
-        <ul class="row">
+    </div>
 
-          <li class="col">
-            <h3 class="footer__text__title">
-              Links
-            </h3>
-            <ol class="footer__text">
-              <li>
-                <a href="/index.html">Home</a>
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="row footer__wrapper">
+          <div class="col-4">
+            <div class="footer__logo">
+              <a href="./index.html" class="logo">
+                <img src="./images/desk-lamp.png" alt="logo" />
+                <h1>Arrshy's Furniture</h1>
+              </a>
+            </div>
+            <p class="footer__desc">
+              Fill your home with uniqueness for your whole family.
+            </p>
+            <div class="footer__socials">
+              <h4 class="footer__socials__title">Follow us</h4>
+              <ol class="footer__socials__list">
+                <li>
+                  <a href="https://www.facebook.com" target="_blank">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-facebook"
+                    >
+                      <path
+                        d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                      />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com" target="_blank">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="feather feather-instagram"
+                    >
+                      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                      <path
+                        d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                      />
+                      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://wa.me/045849704" target="_blank">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+                        fill="currentColor"
+                        class="feather"
+                      />
+                    </svg>
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="col-8">
+            <ul class="row">
+              <li class="col">
+                <h3 class="footer__text__title">Links</h3>
+                <ol class="footer__text">
+                  <li>
+                    <a href="/index.html">Home</a>
+                  </li>
+                  <li>
+                    <a href="./products.html">Products</a>
+                  </li>
+                  <li>
+                    <a href="./order.html">Order Now</a>
+                  </li>
+                  <li>
+                    <a href="./about.html">About Us</a>
+                  </li>
+                  <li>
+                    <a href="./contact.html">Contact Us</a>
+                  </li>
+                </ol>
               </li>
-              <li>
-                <a href="./products.html">Products</a>
-              </li>
-              <li>
-                <a href="./order.html">Order Now</a>
-              </li>
-              <li>
-                <a href="./about.html">About Us</a>
-              </li>
-              <li>
-                <a href="./contact.html">Contact Us</a>
-              </li>
-            </ol>
-          </li>
 
               <li class="col">
                 <h3 class="footer__text__title">Support</h3>

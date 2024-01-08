@@ -98,33 +98,51 @@ function validateForm() {
   return isValid;
 }
 
-  function submitForm() {
-    if (validateForm()) {
-      // Show SweetAlert for successful payment
-      Swal.fire({
-        title: 'Payment Successful',
-        text: 'Thank you for your payment!',
-        icon: 'success',
-        confirmButtonText: 'Okay'
-      }).then((result) => {
-
-        var baseURL = window.location.origin;
-        window.location.href = baseURL + '/index.html';
-      });
-    } else {
-    }
-    return false;
-  }
-  
-  var termsElement = document.getElementById('terms');
-
-  termsElement.addEventListener('click', function() {
-      Swal.fire({
-        title: 'Terms and Conditions of Payment',
-        html: '<p>1. Payment must be made within 30 days of the invoice date.</p>' +
-              '<p>2. Late payments will incur a 5% late fee.</p>' +
-              '<p>3. Terms are subject to change without prior notice.</p>',
-        icon: 'info',
-        confirmButtonText: 'OK'
+function submitForm() {
+  if (validateForm()) {
+    // Show SweetAlert for successful payment
+    Swal.fire({
+      title: "Payment Successful",
+      text: "Thank you for your payment!",
+      icon: "success",
+      confirmButtonText: "Okay",
+    }).then((result) => {
+      var baseURL = window.location.origin;
+      window.location.href = baseURL + "/index.html";
     });
+  } else {
+  }
+  return false;
+}
+
+
+// popup js
+
+document.addEventListener('DOMContentLoaded', function () {
+  const termsLink = document.getElementById('termsLink');
+  const popup = document.getElementById('popup');
+  const closePopup = document.getElementById('closePopup');
+  const overlay = document.getElementById('overlay');
+  const formContainer = document.querySelector('.form');
+
+  termsLink.addEventListener('click', function (event) {
+    event.preventDefault();
+    popup.style.display = 'block';
+    overlay.style.display = 'block';
+    formContainer.classList.add('blur');
   });
+
+  closePopup.addEventListener('click', function () {
+    popup.style.display = 'none';
+    overlay.style.display = 'none';
+    formContainer.classList.remove('blur');
+  });
+
+  window.addEventListener('click', function (event) {
+    if (event.target === overlay) {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+      formContainer.classList.remove('blur');
+    }
+  });
+});
