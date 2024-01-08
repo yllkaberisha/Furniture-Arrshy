@@ -26,6 +26,7 @@
     margin-bottom: 15px; 
     color: var(--black-1);
     text-shadow:  .5px .5px .4px rgba(0, 0, 0, 0.5);
+    text-wrap: wrap;
 
   }
   
@@ -309,7 +310,7 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 100px;
-  background-attachment: scroll;
+  background-attachment:scroll;
 }
 
 .discount__images img {
@@ -513,7 +514,7 @@
 table {
   width: 90%;
   border-collapse: collapse;
-  box-shadow: 0 0 2px rgba(67, 66, 66, 0.1); 
+  box-shadow: 0 0 21px rgba(67, 66, 66, 0.1); 
 }
 
 .custom-margin-right{
