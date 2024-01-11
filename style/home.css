@@ -1,15 +1,9 @@
 /* hero section styles */
-.hero__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse;
-    gap: 40px;
-  }
-  
+
+
   .hero__left__wrapper {
     max-width: 350px;
-  }
+  } 
   
   .hero__imgWrapper {
     max-width: 400px;
@@ -43,25 +37,13 @@
   }
   
   @media only screen and (min-width: 768px) {
-    .hero__wrapper {
-      flex-direction: row;
-      gap: 0;
-    }
-  
-    .hero__left {
-      flex: 3;
-    }
-  
-    .hero__right {
-      flex: 4;
-    }
   
     .hero__heading {
       font-size: 36px;
       margin-bottom: 20px;
       text-align: left;
     }
-  
+ 
     .hero__info {
       margin-bottom: 20px;
       text-align: left;
@@ -89,13 +71,10 @@
   
 
   /* End hero section styles */
-  .storeInfo__wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: -90px;
+  #storeInfo{
+    margin-top: -100px;
   }
+
   
   .storeInfo__item {
     background-color: var(--lightGreen-1);
