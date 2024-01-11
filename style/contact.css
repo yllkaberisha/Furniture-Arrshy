@@ -30,7 +30,7 @@
 .form__group select {
   width: 100%;
   outline: 2px solid #237088;; /* Add blue border */
-  background-color: var(--lightGreen-1);
+  background-color: #ffffff;
   font-size: 14x;
   font-family: Raleway;
   font-weight: 600;
