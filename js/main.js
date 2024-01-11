@@ -129,7 +129,7 @@ if(heroInfoElement){
       return `<tr>
                 <td>${item.name}</td>
                 <td>${item.description}</td>
-                <td>${item.price}</td>
+                <td>$${item.price}</td>
               </tr>`;
     });
 
@@ -151,6 +151,7 @@ if(heroInfoElement){
   var metalMaterials = allItems.filter(function(item) {
     return item.material === 'metal';
   });
+  console.log(metalMaterials)
 
   renderTable('metal', metalMaterials, 'metal-material-items', 'metal-total');
 

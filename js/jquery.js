@@ -23,6 +23,10 @@
     //----------------------------------------------------------------
 
     //callback
+    $(".moreReviews").show("slow", function(){
+        console.log("The paragraph is now shown");
+    });
+
     $(".moreReviews").hide("slow", function(){
         console.log("The paragraph is now hidden");
     });
@@ -37,7 +41,8 @@
     
 
     //---------------------------------------------------------------
-     var text = $('.textToModify').text()
+   
+    var text = $('.textToModify').text()
     console.log(text)
 
     //-------------------------------------------------------

@@ -1,0 +1,212 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body {
+    min-height: 100vh;
+}
+
+
+.payment-method {
+    margin-top:1rem;
+}
+
+.checkout {
+    display: flex;
+    flex-direction: column;
+    margin-top:1.5rem;
+    align-items: center;
+    gap:0.5rem;
+}
+
+.choose-card {
+    display: flex;
+    gap:1rem;
+}
+
+.image.visa-image, 
+.image.paypal-image {
+    border: 1px solid #878383;
+    padding:12px;
+    border-radius: 7px;
+    width:10rem;
+    height:5rem;
+    background-color: #fff;
+}
+
+.image.visa-image:hover,
+.image.visa-image:focus, 
+.image.paypal-image:hover,
+.image.paypal-image:focus{
+    cursor: pointer;
+    border:2px solid #000;
+}
+
+.radio {
+    outline:none;
+    border:none;
+}
+
+.visa-card img {
+    width:100%;
+    height:100%;
+}
+.visa-card img,
+.paypal img {
+    width:100%;
+    background-color: transparent;
+    object-fit: contain;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    width:35rem;
+    justify-content: center;
+}
+.payment-group {
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    gap:0.5rem;
+}
+
+.payment-group.horizontal {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right,
+.left {
+    width:48%;
+}
+
+label,input {
+    display: block;
+    width:100%;
+    padding:15px 7px;
+}
+label:focus,
+input:focus {
+    outline: 2px solid #237088;
+}
+input {
+    border:none;
+    border-radius:10px;
+}
+label {
+    font-size:1.45rem
+}
+
+input[type="submit"] {
+    background-color: #237088;
+    color:#fff;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    margin-top:1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #7bc2d7;
+    transition: all 0.5s linear;
+}
+
+input::placeholder {
+    color: #ccc5c5; 
+}
+
+.payment-terms {
+    display: flex;
+    gap:1rem;
+    align-items: center;
+}
+
+.terms-input input {
+    width:24px;
+    height:24px;
+}
+
+.terms-text {
+    margin:0;
+}
+/* error message */
+
+.error-message {
+    color: red;
+}
+/* end error */
+  
+input[type='radio'] {
+    outline:none;
+    border:none;
+    margin-top:1rem;
+}
+
+.focus {
+    outline: 2px solid #237088;
+}
+
+
+
+
+/* Popup style */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border-radius:10px;
+  }
+  
+  .popup-content {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .close {
+    color: #000;
+    position:fixed;
+    right:32px;
+    top:10px;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .form {
+    position:relative;
+  }
+  .overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+  }
+  
+  .blur {
+    filter: blur(5px); 
+  }
+
+  .terms-paragraph {
+    font-size:16px;
+  }
+
+

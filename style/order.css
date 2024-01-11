@@ -1,5 +1,25 @@
+body {
+    margin: 0px;
+    padding: 0;
+    /* Make sure the body takes the full height of the viewport */
+   
+    justify-content: center;
+    align-items:center;
+    align-content: center;
+	align-self: center;	
+    
+}
+
 #form {
-	padding: 136px 0;
+	
+	padding-right: 500px;
+	display:grid;
+	text-align:left;
+	overflow: hidden;
+	justify-content: center;
+	align-items: center;
+   
+
 }
 h3.form__title {
 	font-size: 28.8px;
@@ -7,58 +27,86 @@ h3.form__title {
 	font-weight: 600;
 }
 .form__wrapper {
-	padding:48px 0;
+	padding:5px 0;
+	margin-bottom:2px;
+	width: 300px;
+	display: grid;
 }
 .form__wrapper form {
 	display: grid;
 	grid-template-columns:400px;
 	gap: 32px;
+	margin-bottom: -95px;
+	margin-top: -5px;
+	text-align: left;
+	width: 300px;
+
 }
 .form__group{
-	margin: 5px 0;
+	margin: 5px;
 	position: relative;
+	margin-bottom: -35px;
+	align-items: center;
+/*	display:inline-block;*/
+    display: grid;
+	
 }
 .btn.primary-btn{
 	text-transform: uppercase;
 }
 
 .form__group p{
-	font-size: 15px;
+	font-size: 16px;
 	color: red;
 	visibility: hidden;
+	font-weight: bold;
 
 }
-.success input{
-	border: 3px green solid;
-}
+
+
 .error input{
 	border: 3px red solid;
+	
 }
 .error p{
 	visibility: visible;
+	margin: 15px;
 }
 .form__group label {
-	font-size: 10px;
+	font-size: 5px ;
 	font-family: Poppins;
 	color: var(--black-2);
 	font-weight: 500;
+	display: grid;
+	
+
 }
 .form__group input,
 .form__group textarea,
 .form__group select {
 	width: 100%;
 	border: none;
-	background-color: var(--lightGreen-1);
-	font-size: 20px;
+	background-color: white;
+	color: var(--black-2); 
+	/*font-size: 5px;*/
 	font-family: Raleway;
 	font-weight: 400px;
-	padding: 10px;
-	border-radius: 8px;
-	margin-top: 5px;
-	color: var(--black-2);
+	padding: 5px;
+	border-radius: 7px;
+	/*margin-top: 100px;*/
+	margin-bottom:-5px;
+	display: grid;
+}
+
+label:focus,
+input:focus,
+select:focus,
+textarea:focus{
+    outline: 2px solid #237088;
 }
 .form__group textarea {
 	resize: vertical;
+	display: grid;
 }
 .form__wrapper button[type='submit'] {
 	width: max-content;
@@ -66,14 +114,19 @@ h3.form__title {
 	padding: 16px 64px;
 	font-weight: 500;
 	letter-spacing: 1.6px;
+	display:grid;
+	align-items: center;
+	margin-bottom: 15px;
 }
 @media only screen and (min-width: 700px) {
+
 	.form__title {
 		font-size: 57px;
 	
 	}
 	.form__wrapper {
-		padding: 0px;
+		padding: 3px;
+		
 	}
 	.form__wrapper form {
 		grid-template-columns: 400px 400px;
@@ -88,7 +141,9 @@ h3.form__title {
 	.form__group textarea,
 	.form__group select {
 		font-size: 20px;
-		padding: 20px;
-		margin-top: 5px;
+		padding: 10px;
+		margin-top: 0px;
+		display: grid;
+	
 	}
 }

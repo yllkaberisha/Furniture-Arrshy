@@ -1,15 +1,9 @@
 /* hero section styles */
-.hero__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column-reverse;
-    gap: 40px;
-  }
-  
+
+
   .hero__left__wrapper {
     max-width: 350px;
-  }
+  } 
   
   .hero__imgWrapper {
     max-width: 400px;
@@ -26,6 +20,7 @@
     margin-bottom: 15px; 
     color: var(--black-1);
     text-shadow:  .5px .5px .4px rgba(0, 0, 0, 0.5);
+    text-wrap: wrap;
 
   }
   
@@ -42,25 +37,13 @@
   }
   
   @media only screen and (min-width: 768px) {
-    .hero__wrapper {
-      flex-direction: row;
-      gap: 0;
-    }
-  
-    .hero__left {
-      flex: 3;
-    }
-  
-    .hero__right {
-      flex: 4;
-    }
   
     .hero__heading {
       font-size: 36px;
       margin-bottom: 20px;
       text-align: left;
     }
-  
+ 
     .hero__info {
       margin-bottom: 20px;
       text-align: left;
@@ -88,13 +71,10 @@
   
 
   /* End hero section styles */
-  .storeInfo__wrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: -90px;
+  #storeInfo{
+    margin-top: -100px;
   }
+
   
   .storeInfo__item {
     background-color: var(--lightGreen-1);
@@ -309,7 +289,7 @@
   background-repeat: no-repeat;
   background-position: bottom right;
   background-size: 100px;
-  background-attachment: scroll;
+  background-attachment:scroll;
 }
 
 .discount__images img {
@@ -513,7 +493,7 @@
 table {
   width: 90%;
   border-collapse: collapse;
-  box-shadow: 0 0 2px rgba(67, 66, 66, 0.1); 
+  box-shadow: 0 0 21px rgba(67, 66, 66, 0.1); 
 }
 
 .custom-margin-right{
